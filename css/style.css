@@ -1,98 +1,134 @@
 /*
  *Variable
  */
-p {
-  background-color: #ffffff;
-  color: #000000;
+/*
+@background-color: #ffffff;
+@text-color: #1A237E;
+*/
+/*
+p{
+  background-color: @background-color;
+  color: @text-color;
   padding: 15px;
   font-size: 48px;
 }
-ul {
-  background-color: #ffffff;
+
+ul{
+  background-color: @background-color;
 }
-li {
-  color: #000000;
+
+li{
+  color: @text-color;
 }
+*/
 /*
  *Mixins
  */
-#circle {
+/*
+#circle{
   background-color: #4CAF50;
   border-radius: 100%;
 }
-#small-circle {
+
+#small-circle{
   width: 50px;
   height: 50px;
-  background-color: #4CAF50;
-  border-radius: 100%;
+  #circle
 }
-#big-circle {
+
+#big-circle{
   width: 100px;
   height: 100px;
-  background-color: #4CAF50;
-  border-radius: 100%;
+  #circle
 }
+*/
 /*
  *Mixins parameter
  */
-#small-circle-parameter {
+/*
+#circle-parameter(@size: 25px){
   background-color: #4CAF50;
   border-radius: 100%;
-  width: 25px;
-  height: 25px;
+
+  width: @size;
+  height: @size;
 }
-#big-circle-parameter {
-  background-color: #4CAF50;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
+
+#small-circle-parameter{
+  #circle-parameter
 }
+
+#big-circle-parameter{
+  #circle-parameter(100px)
+}
+*/
 /*
  *Embedded and scope
  */
-ul {
+/*
+ul{
   background-color: #03A9F4;
   padding: 10px;
   list-style: none;
+
+  li{
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 10px 0;
+  }
 }
-ul li {
-  background-color: #fff;
-  border-radius: 3px;
-  margin: 10px 0;
-}
-ul {
+
+@text-color: #000000;
+
+ul{
+  @text-color: #fff;
   background-color: #03A9F4;
   padding: 10px;
   list-style: none;
+
+  li{
+    color: @text-color;
+    border-radius: 3px;
+    margin: 10px 0;
+  }
 }
-ul li {
-  color: #fff;
-  border-radius: 3px;
-  margin: 10px 0;
-}
+*/
 /*
  *Operation
  */
-div {
+/*
+@div-width: 100px;
+@color: #03A9F4;
+
+div{
   height: 50px;
   display: inline-block;
 }
-#left {
-  width: 100px;
-  background-color: #004590;
+
+#left{
+  width: @div-width;
+  background-color: @color - 100;
 }
-#right {
-  width: 200px;
-  background-color: #03A9F4;
+
+#right{
+  width: @div-width * 2;
+  background-color: @color;
 }
+*/
 /*
  *Function
  */
-div {
+/*
+@var: #004590;
+
+
+div{
   height: 50px;
   width: 50px;
-  background-color: #004590;
+  background-color: @var;
+
+  &:hover{
+    background-color: fadeout(@var, 50%)
+  }
 }
-div:hover {
-  background-color: rgba(0, 69, 144, 0.5);
-}
+*/
