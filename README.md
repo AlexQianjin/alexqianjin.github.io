@@ -7,7 +7,7 @@
 - Birthday: 24/01/1989
 - Nationality: China
 - Location: Wuhan, Hubei
-- Email: qianjin.qin#gmail.com
+- Email: qianjin.qin#outlook.com
 - Ins: @TheAlexQin
 - Weibo: [@TheAlexQin](https://weibo.com/qinqianjin)
 
