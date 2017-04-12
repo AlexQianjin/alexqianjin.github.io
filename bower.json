@@ -1,0 +1,22 @@
+{
+  "name": "alexqianjin.github.io",
+  "description": "Alex Qin's github page",
+  "main": "app.js",
+  "authors": [
+    "Alex Qin"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "github",
+    "pages"
+  ],
+  "homepage": "https://github.com/AlexQianjin/alexqianjin.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
