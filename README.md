@@ -15,3 +15,6 @@
 - Chinese: Native
 - English: Reading&Writing; Normal for speaking
 
+## Professional Skills
+- C#
+- Javascript, Html, Css
