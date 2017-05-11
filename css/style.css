@@ -26,6 +26,10 @@ li{
   right: 3rem;
   bottom: 3rem;
 }
+.back-to-top > a {
+  color: #fff;
+  text-decoration: none;
+}
 /*
  *Mixins
  */
@@ -306,6 +310,27 @@ a[href^=tel] {
 #contactDetails ul li a:hover {
   color: #cf8a05;
 }
+#contactDetails table {
+  font-size: 0.9em;
+  color: #444;
+}
+#contactDetails table tr td a,
+a[href^=tel] {
+  color: #444;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+#contactDetails > table > tbody > tr > td a:hover {
+  color: #cf8a05;
+}
+#contactDetails td:first-child {
+  text-align: right;
+  padding-right: 2px;
+}
 section {
   border-top: 1px solid #dedede;
   padding: 20px 0 0;
@@ -377,6 +402,9 @@ section:last-child {
     width: 100%;
     text-align: center;
   }
+  #contactDetails > table {
+    display: inline-table;
+  }
   .sectionTitle,
   .sectionContent {
     float: none;
@@ -415,6 +443,13 @@ section:last-child {
 @media print {
   #cv {
     width: 100%;
+  }
+  #github-ribbon,
+  .back-to-top {
+    display: none;
+  }
+  #contactDetails > table > tbody > tr {
+    text-align: left;
   }
 }
 @-webkit-keyframes reset {
