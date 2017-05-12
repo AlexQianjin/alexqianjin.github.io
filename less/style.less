@@ -1,10 +1,10 @@
 /*
  *Variable
  */
- /*
+ /**/
 @background-color: #ffffff;
-@text-color: #1A237E;
-*/
+@text-color: #444;
+
 /*
 p{
   background-color: @background-color;
@@ -169,7 +169,7 @@ p {
 	font-size: 1em;
 	line-height: 1.4em;
 	margin-bottom: 20px;
-	color: #444;
+	color: @text-color;
 }
 
 #cv {
@@ -211,8 +211,8 @@ p {
 #headshot img {
 	width: 100%;
 	height: auto;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
 }
 
 #name {
@@ -231,11 +231,11 @@ p {
 
 #contactDetails ul li {
 	margin-bottom: 3px;
-	color: #444;
+	color: @text-color;
 }
 
 #contactDetails ul li a, a[href^=tel] {
-	color: #444; 
+	color: @text-color; 
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in;
 	-moz-transition: all .3s ease-in;
@@ -250,11 +250,11 @@ p {
 
 #contactDetails table {
 	font-size: 0.9em;
-	color: #444;
+	color: @text-color;
 }
 
 #contactDetails table tr td a, a[href^=tel] {
-	color: #444; 
+	color: @text-color; 
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in;
 	-moz-transition: all .3s ease-in;
@@ -321,7 +321,7 @@ section:last-child {
 	column-count:3;
 	margin-bottom: 20px;
 	font-size: 1em;
-	color: #444;
+	color: @text-color;
 }
 
 .keySkills ul li {
@@ -338,6 +338,10 @@ section:last-child {
 	-webkit-column-count:2;
 	column-count:2;
 	}
+
+	#contactDetails > table > tbody > tr {
+		text-align: left;
+	}
 }
 
 @media all and (max-width: 601px) {
@@ -348,7 +352,7 @@ section:last-child {
 	}
 	
 	#headshot {
-		display: none;
+		float: none;
 	}
 	
 	#name, #contactDetails {
@@ -376,6 +380,10 @@ section:last-child {
 		-webkit-column-count:2;
 		column-count:2;
 	}
+
+	#contactDetails > table > tbody > tr {
+		text-align: left;
+	}
 }
 
 @media all and (max-width: 480px) {
@@ -401,15 +409,21 @@ section:last-child {
 		line-height: .8em;
 		margin-bottom: 4px;
 	}
+
+	#contactDetails > table > tbody > tr {
+		text-align: left;
+	}
 }
 
 @media print {
     #cv {
         width: 100%;
     }
+
 	#github-ribbon, .back-to-top{
 		display: none;
 	}
+
 	#contactDetails > table > tbody > tr {
 		text-align: left;
 	}

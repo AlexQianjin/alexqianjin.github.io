@@ -1,10 +1,7 @@
 /*
  *Variable
  */
-/*
-@background-color: #ffffff;
-@text-color: #1A237E;
-*/
+/**/
 /*
 p{
   background-color: @background-color;
@@ -279,8 +276,8 @@ p {
 #headshot img {
   width: 100%;
   height: auto;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
 }
 #name {
   float: left;
@@ -386,6 +383,9 @@ section:last-child {
     -webkit-column-count: 2;
     column-count: 2;
   }
+  #contactDetails > table > tbody > tr {
+    text-align: left;
+  }
 }
 @media all and (max-width: 601px) {
   #cv {
@@ -394,7 +394,7 @@ section:last-child {
     min-width: 280px;
   }
   #headshot {
-    display: none;
+    float: none;
   }
   #name,
   #contactDetails {
@@ -419,6 +419,9 @@ section:last-child {
     -webkit-column-count: 2;
     column-count: 2;
   }
+  #contactDetails > table > tbody > tr {
+    text-align: left;
+  }
 }
 @media all and (max-width: 480px) {
   .mainDetails {
@@ -438,6 +441,9 @@ section:last-child {
   #name h1 {
     line-height: .8em;
     margin-bottom: 4px;
+  }
+  #contactDetails > table > tbody > tr {
+    text-align: left;
   }
 }
 @media print {
