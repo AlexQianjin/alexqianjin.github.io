@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/AlexQianjin/alexqianjin.github.io#readme",
   "devDependencies": {
-    "bower": "^1.8.0",
     "concurrently": "^3.4.0",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.0",
