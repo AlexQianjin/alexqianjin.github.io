@@ -4,6 +4,7 @@
  /**/
 @background-color: #ffffff;
 @text-color: #444;
+@text-color-dark: #222;
 
 /*
 p{
@@ -304,8 +305,13 @@ section:last-child {
 
 .sectionContent h2 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	margin-bottom: -2px;
+}
+
+.sectionContent h2 a {
+	text-decoration: none;
+	color: @text-color-dark;
 }
 
 .subDetails {
@@ -420,7 +426,7 @@ section:last-child {
         width: 100%;
     }
 
-	#github-ribbon, .back-to-top{
+	#headshot, #github-ribbon, .back-to-top{
 		display: none;
 	}
 

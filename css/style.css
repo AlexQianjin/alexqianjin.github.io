@@ -354,8 +354,12 @@ section:last-child {
 }
 .sectionContent h2 {
   font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: -2px;
+}
+.sectionContent h2 a {
+  text-decoration: none;
+  color: #222;
 }
 .subDetails {
   font-size: 0.8em;
@@ -450,6 +454,7 @@ section:last-child {
   #cv {
     width: 100%;
   }
+  #headshot,
   #github-ribbon,
   .back-to-top {
     display: none;
