@@ -361,6 +361,9 @@ section:last-child {
   text-decoration: none;
   color: #222;
 }
+.sectionContent h2 a:hover {
+  color: #cf8a05;
+}
 .subDetails {
   font-size: 0.8em;
   font-style: italic;

@@ -5,6 +5,7 @@
 @background-color: #ffffff;
 @text-color: #444;
 @text-color-dark: #222;
+@text-color-title: #cf8a05;
 
 /*
 p{
@@ -182,7 +183,7 @@ p {
 
 .mainDetails {
 	padding: 25px 35px;
-	border-bottom: 2px solid #cf8a05;
+	border-bottom: 2px solid @text-color-title;
 	background: #ededed;
 }
 
@@ -246,7 +247,7 @@ p {
 }
 
 #contactDetails ul li a:hover { 
-	color: #cf8a05;
+	color: @text-color-title;
 }
 
 #contactDetails table {
@@ -265,7 +266,7 @@ p {
 }
 
 #contactDetails > table > tbody > tr > td a:hover { 
-	color: #cf8a05;
+	color: @text-color-title;
 }
 
 #contactDetails td:first-child{
@@ -300,7 +301,7 @@ section:last-child {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-size: 1.5em;
-	color: #cf8a05;
+	color: @text-color-title;
 }
 
 .sectionContent h2 {
@@ -312,6 +313,10 @@ section:last-child {
 .sectionContent h2 a {
 	text-decoration: none;
 	color: @text-color-dark;
+}
+
+.sectionContent h2 a:hover {
+	color: @text-color-title;
 }
 
 .subDetails {
