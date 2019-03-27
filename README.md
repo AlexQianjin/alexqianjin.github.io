@@ -28,7 +28,7 @@
 # Project Experience
 
 ### EWT
-
+- React/Redux
 
 ### CEP
 
