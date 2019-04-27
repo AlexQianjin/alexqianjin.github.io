@@ -5,7 +5,7 @@
  - 工作年限：10年
  - 手机：15972217310/Email：qianjin.qin@gmail.com/微信号：qqj0124
  - 期望职位：Web前端高级程序员，全栈工程师
- - 期望薪资：税前月薪18k~25k
+ - 期望薪资：税前月薪16k~20k
  - Github：https://github.com/AlexQianjin
  - LinkedIn: https://www.linkedin.com/in/qinqianjin
  - 持有美国10年VISA，多次去加州出差和客户一起工作
