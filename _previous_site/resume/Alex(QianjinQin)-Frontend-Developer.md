@@ -1,7 +1,7 @@
 # Personal Information
 
  - Alex Qin/Qianjin Qin/Male/1989
- - College/Computer Science 
+ - College Degree/Computer Science 
  - Working Years: 10
  - Cellphone: +8615972217310/Email: qianjin.qin@gmail.com
  - Expected Job: Senior Front-end Engineer/Full-Stack Engineer
