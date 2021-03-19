@@ -74,7 +74,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Alex Qin. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} The Alex Qin. Built with Docusaurus.`,
     },
   },
   presets: [
