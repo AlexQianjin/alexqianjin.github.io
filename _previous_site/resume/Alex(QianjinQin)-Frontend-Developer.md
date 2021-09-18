@@ -4,20 +4,20 @@
  - College/Computer Science | Working Years: 12
  - Cellphone: +8615972217310 | Email: qianjin.qin@gmail.com
  - Expected Job: Senior Front-end Engineer/Full-Stack Engineer/Program Manager
- - Github: https://github.com/AlexQianjin | LinkedIn: https://www.linkedin.com/in/qinqianjin
+ - GitHub: https://github.com/AlexQianjin | LinkedIn: https://www.linkedin.com/in/qinqianjin
  - Have 10 years America Visa/Have been to USA a few times for business
- - Hobby: Road bicyle(8 years) | Tennis(6 years) | Gym(3 years)
+ - Hobby: Road bicycle(8 years) | Tennis(6 years) | Gym(3 years)
 
 ---
 
 #### Working Experience
 
 #### (2015-8 ~ Now ) WISTRON Information Technology & Services Co., Ltd. (Wuhan) 
-- **Team Leader** Project Mangement/Business Trip to USA for Rrequirement/Team building/Technical Training
+- **Team Leader** Project Management/Business Trip to USA for Requirement/Team building/Technical Training
 - **Senior Front-end Engineer** Front-end Requirement Implement/Unit Test/Integration/Release
 
 #### (2009-7 ~ 2015-7 ) Wuhan KOTEI Informatics Co., Ltd. 
-- **Project Manager** Project Mangement/Business Trip for Rrequirement/Team building
+- **Project Manager** Project Management/Business Trip for Requirement/Team building
 - **C## Developer** Requirement Implement/Unit Test/Integration/Release/Debugging in the Custom's office.
 
 ---
@@ -25,7 +25,7 @@
 #### Project Experience
 
 ##### EWT
-- **Description:** This project is an oneline training system. Instructor can create courses and assign to students. Students get the course link by email. They can study the course by opening the link in the browser. There are many types of course. One of the types is project type. It will create a virtual machine in the Microsoft Azure. This virtual machine wa created by a customize image which has a industry software in it. Students can remote this VM by web browser. They can finish the practise in it. The system will keep the practise result. Both Instructor and Student can check it. 
+- **Description:** This project is an online training system. Instructor can create courses and assign to students. Students get the course link by email. They can study the course by opening the link in the browser. There are many types of course. One of the types is project type. It will create a virtual machine in the Microsoft Azure. This virtual machine is created by a customize image which has a industry software in it. Students can remote this VM by web browser. They can finish the practice in it. The system will keep the practice result. Both Instructor and Student can check it. 
 
 - **Responsibilities:**
   - Travel to CA, USA for working with clients. 
@@ -66,7 +66,7 @@
 ##### Open Source Project
 
  - [Weapon](https://github.com/AlexQianjin/Weapon): A project base on React，Nodejs and MongoDB. Using Docker and Docker Compose for deployment in Linux Cloud Server and HeroKu.
- - [CountMeIn](https://github.com/AlexQianjin/CountMeIn): Wechat Mini Program. Base on Tencent Cloud.
+ - [CountMeIn](https://github.com/AlexQianjin/CountMeIn): WeChat Mini Program. Base on Tencent Cloud.
 
 ##### Training
 
@@ -86,6 +86,6 @@
 - Container: Docker/Kubernetes
 - Version Control: Git/SVN/TFS
 - Unit Test: jest
-- Cloud/Open Platform: Microsoft Azure/Wechat
+- Cloud/Open Platform: Microsoft Azure/WeChat
 - OS: Windows/Linux(Ubuntu)/Unix(macOS)
 - Agile: Scrum
