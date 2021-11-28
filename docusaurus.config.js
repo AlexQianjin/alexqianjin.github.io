@@ -1,5 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
+  deploymentBranch: 'master',
   title: 'Alex Qin',
   tagline: 'Sharing is caring',
   url: 'https://alexqianjin.github.io',
