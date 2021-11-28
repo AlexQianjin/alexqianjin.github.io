@@ -12,5 +12,10 @@ module.exports = {
         'thank-you',
       ],
     },
+    {
+      type: 'category',
+      label: 'Linux',
+      items: ['linux/cmd', 'linux/git'],
+    },
   ],
 };
