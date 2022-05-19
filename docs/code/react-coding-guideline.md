@@ -1,5 +1,8 @@
-# React&JSX Coding Guideline 
 ---
+sidebar_position: 4
+---
+
+# React&JSX Coding Guideline 
 
 [引用：凹凸实验室](https://guide.aotu.io/docs/js/react.html)
 

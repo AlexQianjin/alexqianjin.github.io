@@ -1,7 +1,10 @@
 ---
 id: git
 title: Git
+sidebar_position: 2
 ---
+
+# Git Commands
 
 ## Git
 - git status

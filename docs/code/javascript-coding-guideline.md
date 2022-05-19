@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # JavaScript Coding Guideline
 
 ### 什么是编码规范

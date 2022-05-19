@@ -1,5 +1,9 @@
-# Coding Guideline
 ---
+sidebar_position: 3
+---
+
+# Coding Guideline
+
 [引用：凹凸实验室](https://guide.aotu.io/docs/js/code.html)
 
 ## 编码规范

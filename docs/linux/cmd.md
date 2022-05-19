@@ -1,9 +1,12 @@
 ---
 id: cmd
 title: Command
+sidebar_position: 1
 ---
 
-### Base Commands
+# Basic Commands
+
+### Commands
 - ls
 - ls ‐ahl
 - ll

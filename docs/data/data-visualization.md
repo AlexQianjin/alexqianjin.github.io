@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Data Visualization with Python
 
 ## Which types of data are used to visualize?

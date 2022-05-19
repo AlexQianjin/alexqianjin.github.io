@@ -1,5 +1,9 @@
-# Language Guideline
 ---
+sidebar_position: 2
+---
+
+# Language Guideline
+
 [引用：凹凸实验室](https://guide.aotu.io/docs/js/language.html)
 
 ## 语言规范
