@@ -1,12 +1,12 @@
 #### 个人信息
 
  - 秦前进 | 男 | 1989 | 居住地: 武汉
- - 武汉语言文化职业学院（2006-2009） 大专/计算机软件技术  | 工作年限：12年
+ - 武汉语言文化职业学院（2006-2009） 大专/计算机软件技术  | 工作年限：13年
  - 手机：15972217310 | Email：qianjin.qin@gmail.com
  - 期望职位：高级前端工程师/全栈工程师/项目经理 | 期望薪资：25k~30k
  - Github：https://github.com/AlexQianjin | LinkedIn: https://www.linkedin.com/in/qinqianjin
  - 持有美国10年VISA，多次去加州出差和客户一起工作
- - 热爱工作和生活。业余公路自行车选手（8年），网球爱好者（6年），健身爱好者（3年）
+ - 热爱工作和生活。业余公路自行车选手（8年），网球爱好者（6年），健身爱好者（4年）
 
 ---
 
@@ -51,10 +51,10 @@
 
 #### 技能清单
 
-- Web开发：JavaScript/Node/C#/Python
-- Web框架：Express/ASP.NET MVC
+- Web开发：JavaScript/TypeScript/Node/C#/Python
+- Web框架：Express/Nest.js/ASP.NET MVC
 - 前端框架：React/Angular/Bootstrap/Apollo GraphQL
-- 前端工具：Webpack/Gulp
+- 前端工具：Webpack/Vite/Gulp
 - 数据库相关：MySQL/PgSQL/MS SQL Sever/SQLite/MongoDB
 - 容器相关：Docker/Kubernetes
 - 版本管理和自动化部署工具：Git/SVN/TFS

@@ -1,12 +1,12 @@
 #### Personal Information
 
 - Alex Qin/Qianjin Qin/Male/1989 | Base: Wuhan, China
-- College/Computer Science | Working Years: 12
+- College/Computer Science | Working Years: 13
 - Cellphone: +8615972217310 | Email: qianjin.qin@gmail.com
 - Expected Job: Senior Front-end Engineer/Full-Stack Engineer/Program Manager
 - GitHub: https://github.com/AlexQianjin | LinkedIn: https://www.linkedin.com/in/qinqianjin
 - Have 10 years America Visa/Have been to USA a few times for business
-- Hobby: Road bicycle(8 years) | Tennis(6 years) | Gym(3 years)
+- Hobby: Road bicycle(8 years) | Tennis(6 years) | Gym(4 years)
 
 ---
 
@@ -86,10 +86,10 @@
 
 #### Professional Skills
 
-- Web Development: JavaScript/Node/C#/Python
-- Web Framework: Express/ASP.NET MVC
+- Web Development: JavaScript/TypeScript/Node/C#/Python
+- Web Framework: Express/Nest.js/ASP.NET MVC
 - Front-end Framework: React/Angular/Bootstrap/Apollo GraphQL
-- Front-end Tools: Webpack/Gulp
+- Front-end Tools: Webpack/Vite/Gulp
 - Database: MySQL/PgSQL/MS SQL Sever/SQLite/MongoDB
 - Container: Docker/Kubernetes
 - Version Control: Git/SVN/TFS
