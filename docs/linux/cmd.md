@@ -37,6 +37,7 @@ sidebar_position: 1
 - sudo reboot
 - sudo netstat -tulpn | grep LISTEN
 - sudo netstat -anp | grep LISTEN
+- sudo netstat -anvp tcp | grep 4200
 - systemctl list-unit-files | grep enabled
 - systemctl | grep running
 - systemctl show [unit]
@@ -125,7 +126,8 @@ sudo ./install.sh
 - :e! 放弃所有修改，并打开原来文件
 - 0 : 将光标移动到当前行首
 - $ : s将光标移动到当前行尾
-- G : s移动到这个文件的最后一行  nG : n 为数字，移动到这个文件的第n行
+- G : s移动到这个文件的最后一行
+- nG : n 为数字，移动到这个文件的第n行
 - gg: s移动到这个文件的第一行 相当于 1G
 - /word :  从光标开始，向下查询一个名为word的字符串。
 - :n1、n2s/word1/word2/g : n1 与n2 为数字.在第n1与n2行之间寻找word1这个字符串, 并将该字符串替换为word2。
@@ -141,6 +143,41 @@ sudo ./install.sh
 - CTRL + r : 重做上一个操作。
 - 小数点'.': 重复前一个动作。
 - :set number
+
+### VI Editing commands
+- i – Insert at cursor (goes into insert mode)
+- a – Write after cursor (goes into insert mode)
+- A – Write at the end of line (goes into insert mode)
+- ESC – Terminate insert mode
+- u – Undo last change
+- U – Undo all changes to the entire line
+- o – Open a new line (goes into insert mode)
+- dd – Delete line
+- 3dd – Delete 3 lines.
+- D – Delete contents of line after the cursor
+- C – Delete contents of a line after the cursor and insert new text. Press ESC key to end insertion.
+- dw – Delete word
+- 4dw – Delete 4 words
+- cw – Change word
+- x – Delete character at the cursor
+- r – Replace character
+- R – Overwrite characters from cursor onward
+- s – Substitute one character under cursor continue to insert
+- S – Substitute entire line and begin to insert at the beginning of the line
+- ~ – Change case of individual character
+
+#### Moving within a file
+- k – Move cursor up
+- j – Move cursor down
+- h – Move cursor left
+- l – Move cursor right
+
+#### Saving and Closing the file
+- Shift+zz – Save the file and quit
+- :w – Save the file but keep it open
+- :q – Quit without saving
+- :wq – Save the file and quit
+
 
 ### Openssh
 - sudo apt install openssh-server
@@ -163,6 +200,29 @@ sudo ./install.sh
 - openssl x509 -text -noout -in cert.pem
 - openssl x509 -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/fullchain.pem
 - openssl rsa -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/privkey.pem
+- openssl s_client -connect s.alexqin.top:443
+
+``` bash
+# convert ca.cer to ca.crt
+openssl x509 -inform PEM -in ca.cer -out ca.crt
+
+cp *.crt /usr/share/ca-certificates
+ls -l /usr/share/ca-certificates
+
+sudo dpkg-reconfigure ca-certificates
+ls -l /etc/ssl/certs | grep -i ca
+
+# another way
+sudo cp *crt  /usr/local/share/ca-certificates/
+sudo update-ca-certificates
+```
+
+### apt proxy
+```
+# create proxy file in the /etc/apt/apt.conf.d
+Acquire::http::Proxy "http://127.0.0.1:10809/";
+Acquire::https::Proxy "http://127.0.0.1:10809/";
+```
 
 ### Certbot
 - sudo certbot certonly --manual (also for renew)
