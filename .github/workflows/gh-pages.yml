@@ -36,18 +36,19 @@ jobs:
       - name: Delete previous deploy
         run: |
           rm -rf ./*
-          ls -R
       - uses: actions/download-artifact@v3
         with:
           name: github-pages
       - name: Display structure of downloaded files
         run: |
           tar -xvf artifact.tar
+          rm -f artifact.tar
           ls -R
       - name: Push dist to master branch
         run: |
            git status
-           git remote get-url origin
+           git commit -a -m 'update master branch for the Netlify deployment'
+           git push
 
   # deploy:
   #   needs: build
