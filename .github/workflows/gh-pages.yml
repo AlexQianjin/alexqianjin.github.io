@@ -42,7 +42,7 @@ jobs:
           name: github-pages
       - name: Display structure of downloaded files
         run: |
-          tar -xvzf artifact.tar
+          tar -xvf artifact.tar
           ls -R
       - name: Push dist to master branch
         run: |
