@@ -3,10 +3,12 @@ name: Github Pages Astro CI
 on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
+  pull_request:
+    branches: [gh-pages]
   push:
     branches: [ gh-pages ]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch: [ gh-pages ]
+  workflow_dispatch:
   
 # Allow this job to clone the repo and create a page deployment
 permissions:
