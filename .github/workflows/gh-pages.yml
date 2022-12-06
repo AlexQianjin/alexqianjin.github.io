@@ -49,7 +49,8 @@ jobs:
            git status
            git config --global user.email "qianjin.qin@qq.com"
            git config --global user.name "Alex Qin"
-           git commit -a -m 'update master branch for the Netlify deployment'
+           git add .
+           git commit -m 'update master branch for the Netlify deployment'
            git push
 
   # deploy:
