@@ -33,11 +33,17 @@ jobs:
         with:
           ref: 'master'
           ssh-key: ${{secrets.GH_PAGES_DEPLOY}}
+      - name: Delete previous deploy
+        run: |
+          rm -rf ./*
+          ls -R
       - uses: actions/download-artifact@v3
         with:
           name: github-pages
       - name: Display structure of downloaded files
-        run: ls -R
+        run: |
+          tar -xvzf artifact.tar
+          ls -R
       - name: Push dist to master branch
         run: |
            git status
