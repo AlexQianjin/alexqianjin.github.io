@@ -47,6 +47,8 @@ jobs:
       - name: Push dist to master branch
         run: |
            git status
+           git config --global user.email "qianjin.qin@qq.com"
+           git config --global user.name "Alex Qin"
            git commit -a -m 'update master branch for the Netlify deployment'
            git push
 
