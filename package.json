@@ -27,5 +27,8 @@
   },
   "devDependencies": {
     "html-escaper": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18.12"
   }
 }
