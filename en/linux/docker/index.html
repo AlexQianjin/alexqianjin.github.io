@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us" class="initial astro-KCYGUFKN">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="generator" content="Astro v1.6.12">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="sitemap" href="/sitemap.xml">
+
+<!-- Preload Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Scrollable a11y code helper -->
+<script src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+<script>
+	const root = document.documentElement;
+	const theme = localStorage.getItem('theme');
+	if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+		root.classList.add('theme-dark');
+	} else {
+		root.classList.remove('theme-dark');
+	}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEL60V1WM9" is:inline></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TEL60V1WM9');
+</script> -->
+
+		<!-- Page Metadata --><link rel="canonical" href="http://astro.build/en/linux/docker/">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="Docker 🚀 Alex Qin">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://astro.build/en/linux/docker/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true">
+<meta property="og:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+<meta name="description" property="og:description" content="Docker">
+<meta property="og:site_name" content="Alex Qin">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="Docker 🚀 Alex Qin">
+<meta name="twitter:description" content="Docker">
+<meta name="twitter:image" content="https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true">
+<meta name="twitter:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there's a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>
+			Docker 🚀 Alex Qin
+		</title>
+		
+		
+	<link rel="stylesheet" href="/assets/coding-guideline.d1bad3cd.css" /></head>
+
+	<body class="astro-KCYGUFKN">
+		<header class="astro-47NAJWBA">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-2M2N6DPX"><span class="astro-2M2N6DPX">Skip to Content</span></a>
+
+
+	<nav class="nav-wrapper astro-47NAJWBA" title="Top Navigation">
+		<div class="menu-toggle astro-47NAJWBA">
+			<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=t=>{const e=async()=>{await(await t())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)},window.dispatchEvent(new Event("astro:idle"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="Z1N45xm" component-url="/SidebarToggle.d7fe6abf.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;class&quot;:[0,&quot;astro-47NAJWBA&quot;]}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;SidebarToggle&quot;,&quot;value&quot;:true}" await-children=""><button type="button" aria-pressed="false" id="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="sr-only">Toggle sidebar</span></button></astro-island>
+		</div>
+		<div class="logo flex astro-47NAJWBA">
+			<a href="/" class="astro-47NAJWBA">
+				<svg class="logo" width="40" height="40" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		#flame {
+			fill: var(--theme-text-accent);
+		}
+
+		#a {
+			fill: var(--theme-text-accent);
+		}
+	</style>
+	<title>Logo</title>
+	<path id="a" fill-rule="evenodd" clip-rule="evenodd" d="M163.008 18.929c1.944 2.413 2.935 5.67 4.917 12.181l43.309 142.27a180.277 180.277 0 00-51.778-17.53l-28.198-95.29a3.67 3.67 0 00-7.042.01l-27.857 95.232a180.225 180.225 0 00-52.01 17.557l43.52-142.281c1.99-6.502 2.983-9.752 4.927-12.16a15.999 15.999 0 016.484-4.798c2.872-1.154 6.271-1.154 13.07-1.154h31.085c6.807 0 10.211 0 13.086 1.157a16.004 16.004 0 016.487 4.806z">
+	</path>
+	<path id="flame" fill-rule="evenodd" clip-rule="evenodd" d="M168.19 180.151c-7.139 6.105-21.39 10.268-37.804 10.268-20.147 0-37.033-6.272-41.513-14.707-1.602 4.835-1.961 10.367-1.961 13.902 0 0-1.056 17.355 11.015 29.426 0-6.268 5.081-11.349 11.349-11.349 10.743 0 10.731 9.373 10.721 16.977v.679c0 11.542 7.054 21.436 17.086 25.606a23.27 23.27 0 01-2.339-10.2c0-11.008 6.463-15.107 13.974-19.87 5.976-3.79 12.616-8.001 17.192-16.449a31.024 31.024 0 003.743-14.82c0-3.299-.513-6.479-1.463-9.463z">
+	</path>
+</svg>
+				<h1 class="astro-47NAJWBA">Alex Qin</h1>
+			</a>
+		</div>
+		<div style="flex-grow: 1;" class="astro-47NAJWBA"></div>
+		
+		<div class="search-item astro-47NAJWBA">
+			<astro-island uid="Z1BpbDm" component-url="/Search.07cc9e7f.js" component-export="default" renderer-url="/client.57317ff2.js" props="{}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;Search&quot;,&quot;value&quot;:true}" await-children=""><button type="button" class="search-input"><svg width="24" height="24" fill="none"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Search</span><span class="search-hint"><span class="sr-only">Press </span><kbd>/</kbd><span class="sr-only"> to search</span></span></button></astro-island>
+		</div>
+	</nav>
+</header>
+
+
+
+
+		<main class="layout astro-KCYGUFKN">
+			<aside id="grid-left" class="grid-sidebar astro-KCYGUFKN" title="Site Navigation">
+				<nav aria-labelledby="grid-left" class="astro-HOBFRNPE">
+	<ul class="nav-groups astro-HOBFRNPE">
+		<li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Docs</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/introduction" class="astro-HOBFRNPE">
+											Introduction
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Linux</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/linux/cmd" class="astro-HOBFRNPE">
+											cmd
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/linux/git" class="astro-HOBFRNPE">
+											git
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/linux/docker" aria-current="page" class="astro-HOBFRNPE">
+											docker
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Note</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/note/notes" class="astro-HOBFRNPE">
+											note
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Code</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/coding-guideline" class="astro-HOBFRNPE">
+											coding
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/javascript-coding-guideline" class="astro-HOBFRNPE">
+											javascript
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/language-guideline" class="astro-HOBFRNPE">
+											language
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/react-coding-guideline" class="astro-HOBFRNPE">
+											react
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Data</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/data/data-visualization" class="astro-HOBFRNPE">
+											data
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li>
+	</ul>
+</nav>
+
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+		var target = document.querySelector('[aria-current="page"]');
+		if (target && target.offsetTop > window.innerHeight - 100) {
+			document.querySelector('.nav-groups').scrollTop = target.offsetTop;
+		}
+	});
+</script>
+
+
+
+
+			</aside>
+			<div id="grid-main" class="astro-KCYGUFKN">
+				<article id="article" class="content astro-B3NH4BJT">
+	<section class="main-section astro-B3NH4BJT">
+		<h1 class="content-title astro-B3NH4BJT" id="overview">Docker</h1>
+		<nav class="block sm:hidden astro-B3NH4BJT">
+			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}},window.dispatchEvent(new Event("astro:media"));</script><astro-island uid="Z1AzfSi" component-url="/TableOfContents.f6b92e49.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,1],\&quot;slug\&quot;:[0,\&quot;docker-introduction\&quot;],\&quot;text\&quot;:[0,\&quot;Docker Introduction\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;repository\&quot;],\&quot;text\&quot;:[0,\&quot;Repository\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;image\&quot;],\&quot;text\&quot;:[0,\&quot;Image\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;create-image\&quot;],\&quot;text\&quot;:[0,\&quot;Create Image\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;container\&quot;],\&quot;text\&quot;:[0,\&quot;Container\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;network\&quot;],\&quot;text\&quot;:[0,\&quot;Network\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;data-management\&quot;],\&quot;text\&quot;:[0,\&quot;Data Management\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;data-volume\&quot;],\&quot;text\&quot;:[0,\&quot;Data Volume\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;data-volume-container\&quot;],\&quot;text\&quot;:[0,\&quot;Data Volume Container\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;backup\&quot;],\&quot;text\&quot;:[0,\&quot;Backup\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;restore\&quot;],\&quot;text\&quot;:[0,\&quot;Restore\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;copy-file\&quot;],\&quot;text\&quot;:[0,\&quot;Copy File\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;dockerfile\&quot;],\&quot;text\&quot;:[0,\&quot;Dockerfile\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;jekyll\&quot;],\&quot;text\&quot;:[0,\&quot;Jekyll\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;node\&quot;],\&quot;text\&quot;:[0,\&quot;Node\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;nginx\&quot;],\&quot;text\&quot;:[0,\&quot;Nginx\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;swagger-api\&quot;],\&quot;text\&quot;:[0,\&quot;Swagger api\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-B3NH4BJT&quot;]}" ssr="" client="media" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}" await-children=""><h2 id="on-this-page-heading" class="heading">On this page</h2><ul><li class="header-link depth-2"><a href="#repository">Repository</a></li><li class="header-link depth-2"><a href="#image">Image</a></li><li class="header-link depth-2"><a href="#container">Container</a></li><li class="header-link depth-2"><a href="#network">Network</a></li><li class="header-link depth-2"><a href="#data-management">Data Management</a></li><li class="header-link depth-2"><a href="#dockerfile">Dockerfile</a></li><li class="header-link depth-2"><a href="#jekyll">Jekyll</a></li><li class="header-link depth-2"><a href="#node">Node</a></li><li class="header-link depth-2"><a href="#nginx">Nginx</a></li><li class="header-link depth-2"><a href="#swagger-api">Swagger api</a></li></ul></astro-island>
+		</nav>
+		<h1 id="docker-introduction">Docker Introduction</h1>
+<h2 id="repository">Repository</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker pull NAME:[TAG] </span></span>
+<span class="line"><span style="color: #c9d1d9">docker pull ubuntu:14.04</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">registry.hub.docker.com</span></span>
+<span class="line"><span style="color: #c9d1d9">docker pull hub.c.163.com/public/ubuntu:14.04</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">docker push</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker tag test:latest user/test:latest</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker push user/test:latest</span></span>
+<span class="line"><span style="color: #c9d1d9">docker search</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker search ubuntu</span></span></code></pre>
+<h2 id="image">Image</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker images</span></span>
+<span class="line"><span style="color: #c9d1d9">docker image ls</span></span>
+<span class="line"><span style="color: #c9d1d9">docker tag ubuntu:latest myubuntu:latest</span></span>
+<span class="line"><span style="color: #c9d1d9">docker inspect ubuntu:14.04</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker inspect ubuntu:14.04 \{\{.Architecture\}\}</span></span>
+<span class="line"><span style="color: #c9d1d9">docker history ubuntu:14.04</span></span>
+<span class="line"><span style="color: #c9d1d9">docker search</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker search --automated -s 3 nginx</span></span>
+<span class="line"><span style="color: #c9d1d9">docker rmi [IMAGE]</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker rmi myubuntu:latest</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker rmi a21c0840213e</span></span></code></pre>
+<h4 id="create-image">Create Image</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]</span></span>
+<span class="line"><span style="color: #c9d1d9">  dokcer commit -m "add a new file" -a "Docker Newbee" a925cb40b3f0 test:0.1</span></span>
+<span class="line"><span style="color: #c9d1d9">docker import [OPTIONS] file|URL| - [REPOSITORY[:TAG]]</span></span>
+<span class="line"><span style="color: #c9d1d9">  cat ubuntu-14.04-x86_64-minimal.tar.gz | docker import - ubuntu:14:04</span></span>
+<span class="line"><span style="color: #c9d1d9">docker save / docker load</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker save -o ubuntu_14.04.tar ubuntu:14.04</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker load -- input ubuntu_14.04.tar</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker load &#x3C; ubuntu_14.04.tar</span></span></code></pre>
+<h2 id="container">Container</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker create</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker create -it ubuntu:latest</span></span>
+<span class="line"><span style="color: #c9d1d9">docker start</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker start af</span></span>
+<span class="line"><span style="color: #c9d1d9">docker ps / docker ps -a</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker run ubuntu /bin/echo 'Hello world'</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker run -it ubuntu:14.04 /bin/bash</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker run -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1;"</span></span>
+<span class="line"><span style="color: #c9d1d9">docker logs</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker logs ce5</span></span>
+<span class="line"><span style="color: #c9d1d9">docker stop</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker stop ce5</span></span>
+<span class="line"><span style="color: #c9d1d9">docker attach</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker run -itd ubuntu</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker attach [CONTAINER]</span></span>
+<span class="line"><span style="color: #c9d1d9">docker exec</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker exec -it 243c32535da7 /bin/bash</span></span>
+<span class="line"><span style="color: #c9d1d9">  To have ctrl+c stop the container you must use -it</span></span>
+<span class="line"><span style="color: #c9d1d9">  To detach from the container you should use ctrl+pq</span></span>
+<span class="line"><span style="color: #c9d1d9">docker rm</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker rm 2ae</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker rm $(docker ps -aq)</span></span>
+<span class="line"><span style="color: #c9d1d9">docker export</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker export -o test_for_run.tar ce5</span></span>
+<span class="line"><span style="color: #c9d1d9">docker import</span></span>
+<span class="line"><span style="color: #c9d1d9">  docker import test_for_run.tar = test/ubuntu:v1.0</span></span></code></pre>
+<h2 id="network">Network</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker network create my-net</span></span>
+<span class="line"><span style="color: #c9d1d9">docker network rm my-net</span></span>
+<span class="line"><span style="color: #c9d1d9">docker create --name my-nginx \</span></span>
+<span class="line"><span style="color: #c9d1d9">  --network my-net \</span></span>
+<span class="line"><span style="color: #c9d1d9">  --publish 8080:80 \</span></span>
+<span class="line"><span style="color: #c9d1d9">  nginx:latest</span></span>
+<span class="line"><span style="color: #c9d1d9">docker network disconnect my-net my-nginx</span></span></code></pre>
+<h2 id="data-management">Data Management</h2>
+<h4 id="data-volume">Data Volume</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker run -d -P web -v /webapp training/webapp python app.py</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run -d -P web -v /src/webapp:/opt/webapp training/webapp python app.py</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app -w /usr/src/app node node test.js</span></span></code></pre>
+<h4 id="data-volume-container">Data Volume Container</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker run -it -v /dbdata --name dbdata ubuntu</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run -it --volumes-from dbdata --name db1 ubuntu</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run -it --volumes-from dbdata --name db2 ubuntu</span></span></code></pre>
+<h4 id="backup">Backup</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker run --volumes-from dbdata -v $(pwd):/backup --name worker ubuntu tar cvf /backup/backup.tar /dbdata</span></span></code></pre>
+<h4 id="restore">Restore</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker run -v /dbdata --name dbdata2 ubuntu /bin/bash</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run --volumes-from dbdta2 -v $(pwd):/backup busybox tar xvf /backup/backup.tar</span></span></code></pre>
+<h4 id="copy-file">Copy File</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker cp &#x3C;containerId>:/usr/local/etc/php/conf.d/php.ini ~/moodle-docker/php/</span></span>
+<span class="line"><span style="color: #c9d1d9">docker cp my-postgres.conf &#x3C;containerId>:/usr/local</span></span></code></pre>
+<h2 id="dockerfile">Dockerfile</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker build -t build/ubuntu-nodejs ./</span></span></code></pre>
+<h2 id="jekyll">Jekyll</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:3.8 jekyll build</span></span></code></pre>
+<h2 id="node">Node</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker run --rm --volume="$PWD:/usr/src/app" -w /usr/src/app -it node:11.14.0-alpine /bin/sh -c "npm install &#x26;&#x26; npm run build &#x26;&#x26; cp -r build ../server"</span></span></code></pre>
+<h2 id="nginx">Nginx</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">sudo docker run --name jekyll-nginx -v $PWD:/usr/share/nginx/html:ro -d -p 80:80 nginx</span></span></code></pre>
+<h2 id="swagger-api">Swagger api</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate \</span></span>
+<span class="line"><span style="color: #c9d1d9">    -i http://petstore.swagger.io/v2/swagger.json \</span></span>
+<span class="line"><span style="color: #c9d1d9">    -l javascript \</span></span>
+<span class="line"><span style="color: #c9d1d9">    -o /local/api-client</span></span>
+<span class="line"><span style="color: #c9d1d9">	</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate \</span></span>
+<span class="line"><span style="color: #c9d1d9">    -i /local/api.json \</span></span>
+<span class="line"><span style="color: #c9d1d9">    -l javascript \</span></span>
+<span class="line"><span style="color: #c9d1d9">    -o /local/out/javascript \</span></span>
+<span class="line"><span style="color: #c9d1d9">    -c /local/javascript.config	</span></span></code></pre>
+	</section>
+	<nav class="block sm:hidden astro-B3NH4BJT">
+		<h2 class="heading astro-WOAJNSZP">More</h2>
+<ul class="astro-WOAJNSZP">
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a class="edit-on-github astro-WOAJNSZP" href="https://github.com/withastro/astro/tree/main/examples/docs/src/pages/en/linux/docker.md" target="_blank">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen" class="svg-inline--fa fa-pen fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Edit this page</span>
+				</a>
+			</li>
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a href="https://astro.build/chat" target="_blank" class="astro-WOAJNSZP">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Join our community</span>
+				</a>
+			</li>
+</ul>
+<div style="margin: 2rem 0; text-align: center;" class="astro-WOAJNSZP">
+	<script>(self.Astro=self.Astro||{}).visible=(s,c,n)=>{const r=async()=>{await(await s())()};let i=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){i.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];i.observe(t)}},window.dispatchEvent(new Event("astro:visible"));</script><astro-island uid="GRCq" component-url="/ThemeToggleButton.59d2057c.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;class&quot;:[0,&quot;astro-WOAJNSZP&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" title="Use light theme" aria-label="Use light theme" /></label><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" title="Use dark theme" aria-label="Use dark theme" /></label></div></astro-island>
+</div>
+
+
+	</nav>
+</article>
+
+
+			</div>
+			<aside id="grid-right" class="grid-sidebar astro-KCYGUFKN" title="Table of Contents">
+				<nav class="sidebar-nav astro-QRGNZQVI" aria-labelledby="grid-right">
+	<div class="sidebar-nav-inner astro-QRGNZQVI">
+		<astro-island uid="1Eh2Sw" component-url="/TableOfContents.f6b92e49.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,1],\&quot;slug\&quot;:[0,\&quot;docker-introduction\&quot;],\&quot;text\&quot;:[0,\&quot;Docker Introduction\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;repository\&quot;],\&quot;text\&quot;:[0,\&quot;Repository\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;image\&quot;],\&quot;text\&quot;:[0,\&quot;Image\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;create-image\&quot;],\&quot;text\&quot;:[0,\&quot;Create Image\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;container\&quot;],\&quot;text\&quot;:[0,\&quot;Container\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;network\&quot;],\&quot;text\&quot;:[0,\&quot;Network\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;data-management\&quot;],\&quot;text\&quot;:[0,\&quot;Data Management\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;data-volume\&quot;],\&quot;text\&quot;:[0,\&quot;Data Volume\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;data-volume-container\&quot;],\&quot;text\&quot;:[0,\&quot;Data Volume Container\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;backup\&quot;],\&quot;text\&quot;:[0,\&quot;Backup\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;restore\&quot;],\&quot;text\&quot;:[0,\&quot;Restore\&quot;]}],[0,{\&quot;depth\&quot;:[0,4],\&quot;slug\&quot;:[0,\&quot;copy-file\&quot;],\&quot;text\&quot;:[0,\&quot;Copy File\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;dockerfile\&quot;],\&quot;text\&quot;:[0,\&quot;Dockerfile\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;jekyll\&quot;],\&quot;text\&quot;:[0,\&quot;Jekyll\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;node\&quot;],\&quot;text\&quot;:[0,\&quot;Node\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;nginx\&quot;],\&quot;text\&quot;:[0,\&quot;Nginx\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;swagger-api\&quot;],\&quot;text\&quot;:[0,\&quot;Swagger api\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-QRGNZQVI&quot;]}" ssr="" client="media" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 id="on-this-page-heading" class="heading">On this page</h2><ul><li class="header-link depth-2"><a href="#repository">Repository</a></li><li class="header-link depth-2"><a href="#image">Image</a></li><li class="header-link depth-2"><a href="#container">Container</a></li><li class="header-link depth-2"><a href="#network">Network</a></li><li class="header-link depth-2"><a href="#data-management">Data Management</a></li><li class="header-link depth-2"><a href="#dockerfile">Dockerfile</a></li><li class="header-link depth-2"><a href="#jekyll">Jekyll</a></li><li class="header-link depth-2"><a href="#node">Node</a></li><li class="header-link depth-2"><a href="#nginx">Nginx</a></li><li class="header-link depth-2"><a href="#swagger-api">Swagger api</a></li></ul></astro-island>
+		<h2 class="heading astro-WOAJNSZP">More</h2>
+<ul class="astro-WOAJNSZP">
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a class="edit-on-github astro-WOAJNSZP" href="https://github.com/withastro/astro/tree/main/examples/docs/src/pages/en/linux/docker.md" target="_blank">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen" class="svg-inline--fa fa-pen fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Edit this page</span>
+				</a>
+			</li>
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a href="https://astro.build/chat" target="_blank" class="astro-WOAJNSZP">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Join our community</span>
+				</a>
+			</li>
+</ul>
+<div style="margin: 2rem 0; text-align: center;" class="astro-WOAJNSZP">
+	<astro-island uid="GRCq" component-url="/ThemeToggleButton.59d2057c.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;class&quot;:[0,&quot;astro-WOAJNSZP&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" title="Use light theme" aria-label="Use light theme" /></label><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" title="Use dark theme" aria-label="Use dark theme" /></label></div></astro-island>
+</div>
+
+
+	</div>
+</nav>
+
+
+			</aside>
+		</main>
+		<footer class="astro-KWKT4VAY">
+	<!-- Thanks to @5t3ph for https://smolcss.dev/#smol-avatar-list! --><div class="contributors astro-T5Y7V74A">
+	<ul class="avatar-list astro-T5Y7V74A" style="--avatar-count: 0">
+		
+	</ul>
+	
+	<a href="https://github.com/withastro/astro/commits/main/examples/docs/src/pages/en/linux/docker.md" class="astro-T5Y7V74A">Contributors</a>
+</div>
+
+
+</footer>
+
+
+	</body></html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us" class="initial astro-KCYGUFKN">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="generator" content="Astro v1.6.12">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="sitemap" href="/sitemap.xml">
+
+<!-- Preload Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Scrollable a11y code helper -->
+<script src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+<script>
+	const root = document.documentElement;
+	const theme = localStorage.getItem('theme');
+	if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+		root.classList.add('theme-dark');
+	} else {
+		root.classList.remove('theme-dark');
+	}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEL60V1WM9" is:inline></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TEL60V1WM9');
+</script> -->
+
+		<!-- Page Metadata --><link rel="canonical" href="http://astro.build/en/code/coding-guideline/">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="Coding Guideline 🚀 Alex Qin">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://astro.build/en/code/coding-guideline/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true">
+<meta property="og:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+<meta name="description" property="og:description" content="Coding Guideline for javascript">
+<meta property="og:site_name" content="Alex Qin">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="astrodotbuild">
+<meta name="twitter:title" content="Coding Guideline 🚀 Alex Qin">
+<meta name="twitter:description" content="Coding Guideline for javascript">
+<meta name="twitter:image" content="https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true">
+<meta name="twitter:image:alt" content="astro logo on a starry expanse of space, with a purple saturn-like planet floating in the right foreground">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there's a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+		<title>
+			Coding Guideline 🚀 Alex Qin
+		</title>
+		
+		
+	<link rel="stylesheet" href="/assets/coding-guideline.d1bad3cd.css" /></head>
+
+	<body class="astro-KCYGUFKN">
+		<header class="astro-47NAJWBA">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-2M2N6DPX"><span class="astro-2M2N6DPX">Skip to Content</span></a>
+
+
+	<nav class="nav-wrapper astro-47NAJWBA" title="Top Navigation">
+		<div class="menu-toggle astro-47NAJWBA">
+			<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=t=>{const e=async()=>{await(await t())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)},window.dispatchEvent(new Event("astro:idle"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="Z1N45xm" component-url="/SidebarToggle.d7fe6abf.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;class&quot;:[0,&quot;astro-47NAJWBA&quot;]}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;SidebarToggle&quot;,&quot;value&quot;:true}" await-children=""><button type="button" aria-pressed="false" id="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="sr-only">Toggle sidebar</span></button></astro-island>
+		</div>
+		<div class="logo flex astro-47NAJWBA">
+			<a href="/" class="astro-47NAJWBA">
+				<svg class="logo" width="40" height="40" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		#flame {
+			fill: var(--theme-text-accent);
+		}
+
+		#a {
+			fill: var(--theme-text-accent);
+		}
+	</style>
+	<title>Logo</title>
+	<path id="a" fill-rule="evenodd" clip-rule="evenodd" d="M163.008 18.929c1.944 2.413 2.935 5.67 4.917 12.181l43.309 142.27a180.277 180.277 0 00-51.778-17.53l-28.198-95.29a3.67 3.67 0 00-7.042.01l-27.857 95.232a180.225 180.225 0 00-52.01 17.557l43.52-142.281c1.99-6.502 2.983-9.752 4.927-12.16a15.999 15.999 0 016.484-4.798c2.872-1.154 6.271-1.154 13.07-1.154h31.085c6.807 0 10.211 0 13.086 1.157a16.004 16.004 0 016.487 4.806z">
+	</path>
+	<path id="flame" fill-rule="evenodd" clip-rule="evenodd" d="M168.19 180.151c-7.139 6.105-21.39 10.268-37.804 10.268-20.147 0-37.033-6.272-41.513-14.707-1.602 4.835-1.961 10.367-1.961 13.902 0 0-1.056 17.355 11.015 29.426 0-6.268 5.081-11.349 11.349-11.349 10.743 0 10.731 9.373 10.721 16.977v.679c0 11.542 7.054 21.436 17.086 25.606a23.27 23.27 0 01-2.339-10.2c0-11.008 6.463-15.107 13.974-19.87 5.976-3.79 12.616-8.001 17.192-16.449a31.024 31.024 0 003.743-14.82c0-3.299-.513-6.479-1.463-9.463z">
+	</path>
+</svg>
+				<h1 class="astro-47NAJWBA">Alex Qin</h1>
+			</a>
+		</div>
+		<div style="flex-grow: 1;" class="astro-47NAJWBA"></div>
+		
+		<div class="search-item astro-47NAJWBA">
+			<astro-island uid="Z1BpbDm" component-url="/Search.07cc9e7f.js" component-export="default" renderer-url="/client.57317ff2.js" props="{}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;Search&quot;,&quot;value&quot;:true}" await-children=""><button type="button" class="search-input"><svg width="24" height="24" fill="none"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Search</span><span class="search-hint"><span class="sr-only">Press </span><kbd>/</kbd><span class="sr-only"> to search</span></span></button></astro-island>
+		</div>
+	</nav>
+</header>
+
+
+
+
+		<main class="layout astro-KCYGUFKN">
+			<aside id="grid-left" class="grid-sidebar astro-KCYGUFKN" title="Site Navigation">
+				<nav aria-labelledby="grid-left" class="astro-HOBFRNPE">
+	<ul class="nav-groups astro-HOBFRNPE">
+		<li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Docs</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/introduction" class="astro-HOBFRNPE">
+											Introduction
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Linux</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/linux/cmd" class="astro-HOBFRNPE">
+											cmd
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/linux/git" class="astro-HOBFRNPE">
+											git
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/linux/docker" class="astro-HOBFRNPE">
+											docker
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Note</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/note/notes" class="astro-HOBFRNPE">
+											note
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Code</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/coding-guideline" aria-current="page" class="astro-HOBFRNPE">
+											coding
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/javascript-coding-guideline" class="astro-HOBFRNPE">
+											javascript
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/language-guideline" class="astro-HOBFRNPE">
+											language
+										</a>
+									</li><li class="nav-link astro-HOBFRNPE">
+										<a href="/en/code/react-coding-guideline" class="astro-HOBFRNPE">
+											react
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li><li class="astro-HOBFRNPE">
+					<div class="nav-group astro-HOBFRNPE">
+						<h2 class="astro-HOBFRNPE">Data</h2>
+						<ul class="astro-HOBFRNPE">
+							<li class="nav-link astro-HOBFRNPE">
+										<a href="/en/data/data-visualization" class="astro-HOBFRNPE">
+											data
+										</a>
+									</li>
+						</ul>
+					</div>
+				</li>
+	</ul>
+</nav>
+
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+		var target = document.querySelector('[aria-current="page"]');
+		if (target && target.offsetTop > window.innerHeight - 100) {
+			document.querySelector('.nav-groups').scrollTop = target.offsetTop;
+		}
+	});
+</script>
+
+
+
+
+			</aside>
+			<div id="grid-main" class="astro-KCYGUFKN">
+				<article id="article" class="content astro-B3NH4BJT">
+	<section class="main-section astro-B3NH4BJT">
+		<h1 class="content-title astro-B3NH4BJT" id="overview">Coding Guideline</h1>
+		<nav class="block sm:hidden astro-B3NH4BJT">
+			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}},window.dispatchEvent(new Event("astro:media"));</script><astro-island uid="2m1xuB" component-url="/TableOfContents.f6b92e49.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,1],\&quot;slug\&quot;:[0,\&quot;coding-guideline\&quot;],\&quot;text\&quot;:[0,\&quot;Coding Guideline\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;编码规范\&quot;],\&quot;text\&quot;:[0,\&quot;编码规范\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;单行代码块\&quot;],\&quot;text\&quot;:[0,\&quot;单行代码块\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;大括号风格\&quot;],\&quot;text\&quot;:[0,\&quot;大括号风格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;变量命名\&quot;],\&quot;text\&quot;:[0,\&quot;变量命名\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;拖尾逗号\&quot;],\&quot;text\&quot;:[0,\&quot;拖尾逗号\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;逗号空格\&quot;],\&quot;text\&quot;:[0,\&quot;逗号空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;逗号风格\&quot;],\&quot;text\&quot;:[0,\&quot;逗号风格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;计算属性的空格\&quot;],\&quot;text\&quot;:[0,\&quot;计算属性的空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;拖尾换行\&quot;],\&quot;text\&quot;:[0,\&quot;拖尾换行\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;函数调用\&quot;],\&quot;text\&quot;:[0,\&quot;函数调用\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;缩进\&quot;],\&quot;text\&quot;:[0,\&quot;缩进\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;对象字面量的键值缩进\&quot;],\&quot;text\&quot;:[0,\&quot;对象字面量的键值缩进\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;构造函数首字母大写\&quot;],\&quot;text\&quot;:[0,\&quot;构造函数首字母大写\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;构造函数的参数\&quot;],\&quot;text\&quot;:[0,\&quot;构造函数的参数\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;链式调用\&quot;],\&quot;text\&quot;:[0,\&quot;链式调用\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;空行\&quot;],\&quot;text\&quot;:[0,\&quot;空行\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;链式赋值\&quot;],\&quot;text\&quot;:[0,\&quot;链式赋值\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;变量声明\&quot;],\&quot;text\&quot;:[0,\&quot;变量声明\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;分号\&quot;],\&quot;text\&quot;:[0,\&quot;分号\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;代码块空格\&quot;],\&quot;text\&quot;:[0,\&quot;代码块空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;函数声明的空格\&quot;],\&quot;text\&quot;:[0,\&quot;函数声明的空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;操作符的空格\&quot;],\&quot;text\&quot;:[0,\&quot;操作符的空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;bom\&quot;],\&quot;text\&quot;:[0,\&quot;BOM\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-B3NH4BJT&quot;]}" ssr="" client="media" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}" await-children=""><h2 id="on-this-page-heading" class="heading">On this page</h2><ul><li class="header-link depth-2"><a href="#编码规范">编码规范</a></li><li class="header-link depth-3"><a href="#单行代码块">单行代码块</a></li><li class="header-link depth-3"><a href="#大括号风格">大括号风格</a></li><li class="header-link depth-3"><a href="#变量命名">变量命名</a></li><li class="header-link depth-3"><a href="#拖尾逗号">拖尾逗号</a></li><li class="header-link depth-3"><a href="#逗号空格">逗号空格</a></li><li class="header-link depth-3"><a href="#逗号风格">逗号风格</a></li><li class="header-link depth-3"><a href="#计算属性的空格">计算属性的空格</a></li><li class="header-link depth-3"><a href="#拖尾换行">拖尾换行</a></li><li class="header-link depth-3"><a href="#函数调用">函数调用</a></li><li class="header-link depth-3"><a href="#缩进">缩进</a></li><li class="header-link depth-3"><a href="#对象字面量的键值缩进">对象字面量的键值缩进</a></li><li class="header-link depth-3"><a href="#构造函数首字母大写">构造函数首字母大写</a></li><li class="header-link depth-3"><a href="#构造函数的参数">构造函数的参数</a></li><li class="header-link depth-3"><a href="#链式调用">链式调用</a></li><li class="header-link depth-3"><a href="#空行">空行</a></li><li class="header-link depth-3"><a href="#链式赋值">链式赋值</a></li><li class="header-link depth-3"><a href="#变量声明">变量声明</a></li><li class="header-link depth-3"><a href="#分号">分号</a></li><li class="header-link depth-3"><a href="#代码块空格">代码块空格</a></li><li class="header-link depth-3"><a href="#函数声明的空格">函数声明的空格</a></li><li class="header-link depth-3"><a href="#操作符的空格">操作符的空格</a></li><li class="header-link depth-3"><a href="#bom">BOM</a></li></ul></astro-island>
+		</nav>
+		<h1 id="coding-guideline">Coding Guideline</h1>
+<p><a href="https://guide.aotu.io/docs/js/code.html">引用：凹凸实验室</a></p>
+<h2 id="编码规范">编码规范</h2>
+<p>统一团队的编码规范，有助于代码的维护。本章是传统意义上的 <code>Style Guideline</code>，目的是统一一些相对主观化的代码风格。</p>
+<h3 id="单行代码块">单行代码块</h3>
+<p>在单行代码块中使用空格</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">foo</span><span style="color: #C9D1D9"> () {</span><span style="color: #FF7B72">return</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">true</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (foo) {bar </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">0</span><span style="color: #C9D1D9">}</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">foo</span><span style="color: #C9D1D9"> () { </span><span style="color: #FF7B72">return</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">true</span><span style="color: #C9D1D9"> }</span></span>
+<span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (foo) { bar </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">0</span><span style="color: #C9D1D9"> }</span></span></code></pre>
+<h3 id="大括号风格">大括号风格</h3>
+<p>在编程过程中，大括号风格与缩进风格紧密联系，用来描述大括号相对代码块位置的方法有很多。在 JavaScript 中，主要有三种风格，如下：</p>
+<ul>
+<li>
+<p><strong>One True Brace Style</strong></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (foo) {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">bar</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">} </span><span style="color: #FF7B72">else</span><span style="color: #C9D1D9"> {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">baz</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+</li>
+<li>
+<p><strong>Stroustrup</strong></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (foo) {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">bar</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #FF7B72">else</span><span style="color: #C9D1D9"> {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">baz</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+</li>
+<li>
+<p><strong>Allman</strong></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (foo)</span></span>
+<span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">bar</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #FF7B72">else</span></span>
+<span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">baz</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+</li>
+</ul>
+<p>我们团队约定使用 <code>One True Brace Style</code> 风格</p>
+<h3 id="变量命名">变量命名</h3>
+<p>当命名变量时，主流分为驼峰式命名（constiableName）和下划线命名（constiable_name）两大阵营。</p>
+<blockquote>
+<p>团队约定使用驼峰式命名</p>
+</blockquote>
+<h3 id="拖尾逗号">拖尾逗号</h3>
+<p>在 ECMAScript5 里面，对象字面量中的拖尾逗号是合法的，但在 IE8（非 IE8 文档模式）下，当出现拖尾逗号，则会抛出错误。</p>
+<p>拖尾逗号的例子：</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {</span></span>
+<span class="line"><span style="color: #C9D1D9">  name: </span><span style="color: #A5D6FF">'foo'</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">  age: </span><span style="color: #A5D6FF">'22'</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<p>拖尾逗号的好处是，简化了对象和数组添加或删除元素，我们只需要修改新增的行即可，并不会增加差异化的代码行数。</p>
+<blockquote>
+<p>因为拖尾逗号有好也有不好，所以团队约定允许在最后一个元素或属性与闭括号 <code>]</code> 或 <code>}</code> 在不同行时，可以（但不要求）使用拖尾逗号。当在同一行时，禁止使用拖尾逗号。</p>
+</blockquote>
+<h3 id="逗号空格">逗号空格</h3>
+<p>逗号前后的空格可以提高代码的可读性，团队约定在逗号后面使用空格，逗号前面不加空格。</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">,</span><span style="color: #79C0FF">bar</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9"> , </span><span style="color: #79C0FF">bar</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9"> ,</span><span style="color: #79C0FF">bar</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">bar</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span></code></pre>
+<h3 id="逗号风格">逗号风格</h3>
+<p>逗号分隔列表时，在 JavaScript 中主要有两种逗号风格：</p>
+<ul>
+<li>标准风格，逗号放置在当前行的末尾</li>
+<li>逗号前置风格，逗号放置在下一行的开始位置</li>
+</ul>
+<blockquote>
+<p>团队约定使用标准风格</p>
+</blockquote>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span>
+<span class="line"><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">bar </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span>
+<span class="line"><span style="color: #C9D1D9">, bar </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> [</span><span style="color: #A5D6FF">'name'</span></span>
+<span class="line"><span style="color: #C9D1D9">          , </span><span style="color: #A5D6FF">'age'</span><span style="color: #C9D1D9">]</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #79C0FF">bar</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">foo</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> [</span><span style="color: #A5D6FF">'name'</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #A5D6FF">'age'</span><span style="color: #C9D1D9">]</span></span></code></pre>
+<h3 id="计算属性的空格">计算属性的空格</h3>
+<p>团队约定在对象的计算属性内，禁止使用空格</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">obj[</span><span style="color: #A5D6FF">'foo'</span><span style="color: #C9D1D9"> ]</span></span>
+<span class="line"><span style="color: #C9D1D9">obj[ </span><span style="color: #A5D6FF">'foo'</span><span style="color: #C9D1D9">]</span></span>
+<span class="line"><span style="color: #C9D1D9">obj[ </span><span style="color: #A5D6FF">'foo'</span><span style="color: #C9D1D9"> ]</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">obj[</span><span style="color: #A5D6FF">'foo'</span><span style="color: #C9D1D9">]</span></span></code></pre>
+<h3 id="拖尾换行">拖尾换行</h3>
+<p>在非空文件中，存在拖尾换行是一个常见的 <code>UNIX</code> 风格，它的好处是可以方便在串联和追加文件时不会打断 <code>Shell</code> 的提示。在日常的项目中，保留拖尾换行的好处是，可以减少版本控制时的代码冲突。</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">func</span><span style="color: #C9D1D9"> () {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">// do something</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">func</span><span style="color: #C9D1D9"> () {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">// do something</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">// 此处是新的一行</span></span></code></pre>
+<blockquote>
+<p>可以通过 .editorconfig 添加 EOL</p>
+</blockquote>
+<h3 id="函数调用">函数调用</h3>
+<p>为了避免语法错误，团队约定在函数调用时，禁止使用空格</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #D2A8FF">fn</span><span style="color: #C9D1D9"> ()</span></span>
+<span class="line"><span style="color: #C9D1D9">fn</span></span>
+<span class="line"><span style="color: #C9D1D9">()</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #D2A8FF">fn</span><span style="color: #C9D1D9">()</span></span></code></pre>
+<h3 id="缩进">缩进</h3>
+<p>代码保持一致的缩进，是作为工程师的职业素养。但缩进用两个空格，还是四个空格，是用 <code>Tab</code> 还是空格呢？这样的争论太多了，也得不出答案。本规范结合了市面上优秀的开源项目，姑且约定使用 <code>空格</code> 来缩进，而且缩进使用两个空格。</p>
+<p>那是不是不能使用 <code>Tab</code> 进行缩进了？我们可以通过配置 <code>.editorconfig</code> ，将 <code>Tab</code> 自动转换为空格。</p>
+<h3 id="对象字面量的键值缩进">对象字面量的键值缩进</h3>
+<p>团队约定对象字面量的键和值之间不能存在空格，且要求对象字面量的冒号和值之间存在一个空格</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">obj</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> { </span><span style="color: #A5D6FF">'foo'</span><span style="color: #C9D1D9"> : </span><span style="color: #A5D6FF">'haha'</span><span style="color: #C9D1D9"> }</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">obj</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> { </span><span style="color: #A5D6FF">'foo'</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">'haha'</span><span style="color: #C9D1D9"> }</span></span></code></pre>
+<h3 id="构造函数首字母大写">构造函数首字母大写</h3>
+<p>在 JavaScript 中 <code>new</code> 操作符用来创建某个特定类型的对象的一个实例，该类型的对象是由一个构造函数表示的。由于构造函数只是常规函数，唯一区别是使用 <code>new</code> 来调用。所以我们团队约定构造函数的首字母要大小，以此来区分构造函数和普通函数。</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">fooItem</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">foo</span><span style="color: #C9D1D9">()</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">fooItem</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">Foo</span><span style="color: #C9D1D9">()</span></span></code></pre>
+<h3 id="构造函数的参数">构造函数的参数</h3>
+<p>在 JavaScript 中，通过 <code>new</code> 调用构造函数时，如果不带参数，可以省略后面的圆括号。但这样会造成与整体的代码风格不一致，所以团队约定使用圆括号</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">person</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> Person</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">person</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">Person</span><span style="color: #C9D1D9">()</span></span></code></pre>
+<h3 id="链式调用">链式调用</h3>
+<p>链式调用如果放在同一行，往往会造成代码的可读性差，但有些时候，短的链式调用并不会影响美观。所以本规范约定一行最多只能有四个链式调用，超过就要求换行。</p>
+<h3 id="空行">空行</h3>
+<p>空白行对于分离代码逻辑有帮助，但过多的空行会占据屏幕的空间，影响可读性。团队约定最大连续空行数为 2</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">a</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">b</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">a</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">b</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span></code></pre>
+<h3 id="链式赋值">链式赋值</h3>
+<p>链式赋值容易造成代码的可读性差，所以团队约定禁止使用链式赋值</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">a</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> b </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> c </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">a</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">b</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">c</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span></code></pre>
+<h3 id="变量声明">变量声明</h3>
+<p>JavaScript 允许在一个声明中，声明多个变量。团队约定在声明变量时，一个声明只能有一个变量</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">a</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">b</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">c</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">a</span></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">b</span></span>
+<span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">c</span></span></code></pre>
+<h3 id="分号">分号</h3>
+<p>JavaScript 在所有类 C 语言中是比较独特的，它不需要在每个语句的末尾有分号。在很多情况下，JavaScript 引擎可以确定一个分号应该在什么位置然后自动添加它。此特征被称为 自动分号插入 (ASI)，被认为是 JavaScript 中较为有争议的特征。</p>
+<p>团队中对于是否应该使用分号，也有许多争论，本规范推荐不使用分号，因为我们认为好的工程师应该知道什么时候该加，什么时候不该加。</p>
+<p>相关参考 ：<a href="http://eslint.org/docs/rules/semi">semi</a></p>
+<h3 id="代码块空格">代码块空格</h3>
+<p>一致性是任何风格指南的重要组成部分。虽然在哪里放置块的开括号纯属个人偏好，但在整个项目中应该保持一致。不一致的风格将会分散读者阅读代码的注意力。</p>
+<blockquote>
+<p>团队约定代码块前要添加空格</p>
+</blockquote>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (a){</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">b</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">a</span><span style="color: #C9D1D9"> (){}</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (a) {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">b</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">a</span><span style="color: #C9D1D9"> () {}</span></span></code></pre>
+<h3 id="函数声明的空格">函数声明的空格</h3>
+<p>当格式化一个函数，函数名或 function 关键字与左括号之间允许有空白。命名函数要求函数名和 function 关键字之间有空格，但是匿名函数要求不加空格。</p>
+<blockquote>
+<p>团队约定函数括号前要加空格</p>
+</blockquote>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">func</span><span style="color: #C9D1D9">(</span><span style="color: #FFA657">x</span><span style="color: #C9D1D9">) {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">// ...</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">func</span><span style="color: #C9D1D9"> (</span><span style="color: #FFA657">x</span><span style="color: #C9D1D9">) {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">// ...</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<h3 id="操作符的空格">操作符的空格</h3>
+<p>团队约定操作符前后都需要添加空格</p>
+<p><em>不推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">sum</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span><span style="color: #FF7B72">+</span><span style="color: #79C0FF">2</span></span></code></pre>
+<p><em>推荐</em></p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">sum</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">+</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">2</span></span></code></pre>
+<h3 id="bom">BOM</h3>
+<p>Unicode 字节顺序标记 (BOM) 用来指定代码单元是高字节序还是低字节序。也就是说，是高位在前还是低位在前。UTF-8 不需要 BOM 来表明字节顺序，因为单个字节并不影响字节顺序。</p>
+<p>相信不少同学遇到过 BOM 的坑，这里不多说了，切记不要使用 windows 的记事本改代码！</p>
+	</section>
+	<nav class="block sm:hidden astro-B3NH4BJT">
+		<h2 class="heading astro-WOAJNSZP">More</h2>
+<ul class="astro-WOAJNSZP">
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a class="edit-on-github astro-WOAJNSZP" href="https://github.com/withastro/astro/tree/main/examples/docs/src/pages/en/code/coding-guideline.md" target="_blank">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen" class="svg-inline--fa fa-pen fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Edit this page</span>
+				</a>
+			</li>
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a href="https://astro.build/chat" target="_blank" class="astro-WOAJNSZP">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Join our community</span>
+				</a>
+			</li>
+</ul>
+<div style="margin: 2rem 0; text-align: center;" class="astro-WOAJNSZP">
+	<script>(self.Astro=self.Astro||{}).visible=(s,c,n)=>{const r=async()=>{await(await s())()};let i=new IntersectionObserver(e=>{for(const t of e)if(!!t.isIntersecting){i.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];i.observe(t)}},window.dispatchEvent(new Event("astro:visible"));</script><astro-island uid="GRCq" component-url="/ThemeToggleButton.59d2057c.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;class&quot;:[0,&quot;astro-WOAJNSZP&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" title="Use light theme" aria-label="Use light theme" /></label><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" title="Use dark theme" aria-label="Use dark theme" /></label></div></astro-island>
+</div>
+
+
+	</nav>
+</article>
+
+
+			</div>
+			<aside id="grid-right" class="grid-sidebar astro-KCYGUFKN" title="Table of Contents">
+				<nav class="sidebar-nav astro-QRGNZQVI" aria-labelledby="grid-right">
+	<div class="sidebar-nav-inner astro-QRGNZQVI">
+		<astro-island uid="wFHsu" component-url="/TableOfContents.f6b92e49.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,1],\&quot;slug\&quot;:[0,\&quot;coding-guideline\&quot;],\&quot;text\&quot;:[0,\&quot;Coding Guideline\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;编码规范\&quot;],\&quot;text\&quot;:[0,\&quot;编码规范\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;单行代码块\&quot;],\&quot;text\&quot;:[0,\&quot;单行代码块\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;大括号风格\&quot;],\&quot;text\&quot;:[0,\&quot;大括号风格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;变量命名\&quot;],\&quot;text\&quot;:[0,\&quot;变量命名\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;拖尾逗号\&quot;],\&quot;text\&quot;:[0,\&quot;拖尾逗号\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;逗号空格\&quot;],\&quot;text\&quot;:[0,\&quot;逗号空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;逗号风格\&quot;],\&quot;text\&quot;:[0,\&quot;逗号风格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;计算属性的空格\&quot;],\&quot;text\&quot;:[0,\&quot;计算属性的空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;拖尾换行\&quot;],\&quot;text\&quot;:[0,\&quot;拖尾换行\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;函数调用\&quot;],\&quot;text\&quot;:[0,\&quot;函数调用\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;缩进\&quot;],\&quot;text\&quot;:[0,\&quot;缩进\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;对象字面量的键值缩进\&quot;],\&quot;text\&quot;:[0,\&quot;对象字面量的键值缩进\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;构造函数首字母大写\&quot;],\&quot;text\&quot;:[0,\&quot;构造函数首字母大写\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;构造函数的参数\&quot;],\&quot;text\&quot;:[0,\&quot;构造函数的参数\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;链式调用\&quot;],\&quot;text\&quot;:[0,\&quot;链式调用\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;空行\&quot;],\&quot;text\&quot;:[0,\&quot;空行\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;链式赋值\&quot;],\&quot;text\&quot;:[0,\&quot;链式赋值\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;变量声明\&quot;],\&quot;text\&quot;:[0,\&quot;变量声明\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;分号\&quot;],\&quot;text\&quot;:[0,\&quot;分号\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;代码块空格\&quot;],\&quot;text\&quot;:[0,\&quot;代码块空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;函数声明的空格\&quot;],\&quot;text\&quot;:[0,\&quot;函数声明的空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;操作符的空格\&quot;],\&quot;text\&quot;:[0,\&quot;操作符的空格\&quot;]}],[0,{\&quot;depth\&quot;:[0,3],\&quot;slug\&quot;:[0,\&quot;bom\&quot;],\&quot;text\&quot;:[0,\&quot;BOM\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-QRGNZQVI&quot;]}" ssr="" client="media" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 id="on-this-page-heading" class="heading">On this page</h2><ul><li class="header-link depth-2"><a href="#编码规范">编码规范</a></li><li class="header-link depth-3"><a href="#单行代码块">单行代码块</a></li><li class="header-link depth-3"><a href="#大括号风格">大括号风格</a></li><li class="header-link depth-3"><a href="#变量命名">变量命名</a></li><li class="header-link depth-3"><a href="#拖尾逗号">拖尾逗号</a></li><li class="header-link depth-3"><a href="#逗号空格">逗号空格</a></li><li class="header-link depth-3"><a href="#逗号风格">逗号风格</a></li><li class="header-link depth-3"><a href="#计算属性的空格">计算属性的空格</a></li><li class="header-link depth-3"><a href="#拖尾换行">拖尾换行</a></li><li class="header-link depth-3"><a href="#函数调用">函数调用</a></li><li class="header-link depth-3"><a href="#缩进">缩进</a></li><li class="header-link depth-3"><a href="#对象字面量的键值缩进">对象字面量的键值缩进</a></li><li class="header-link depth-3"><a href="#构造函数首字母大写">构造函数首字母大写</a></li><li class="header-link depth-3"><a href="#构造函数的参数">构造函数的参数</a></li><li class="header-link depth-3"><a href="#链式调用">链式调用</a></li><li class="header-link depth-3"><a href="#空行">空行</a></li><li class="header-link depth-3"><a href="#链式赋值">链式赋值</a></li><li class="header-link depth-3"><a href="#变量声明">变量声明</a></li><li class="header-link depth-3"><a href="#分号">分号</a></li><li class="header-link depth-3"><a href="#代码块空格">代码块空格</a></li><li class="header-link depth-3"><a href="#函数声明的空格">函数声明的空格</a></li><li class="header-link depth-3"><a href="#操作符的空格">操作符的空格</a></li><li class="header-link depth-3"><a href="#bom">BOM</a></li></ul></astro-island>
+		<h2 class="heading astro-WOAJNSZP">More</h2>
+<ul class="astro-WOAJNSZP">
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a class="edit-on-github astro-WOAJNSZP" href="https://github.com/withastro/astro/tree/main/examples/docs/src/pages/en/code/coding-guideline.md" target="_blank">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen" class="svg-inline--fa fa-pen fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Edit this page</span>
+				</a>
+			</li>
+	<li class="header-link depth-2 astro-WOAJNSZP">
+				<a href="https://astro.build/chat" target="_blank" class="astro-WOAJNSZP">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-alt" class="svg-inline--fa fa-comment-alt fa-w-16 astro-WOAJNSZP" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em">
+						<path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z" class="astro-WOAJNSZP"></path>
+					</svg>
+					<span class="astro-WOAJNSZP">Join our community</span>
+				</a>
+			</li>
+</ul>
+<div style="margin: 2rem 0; text-align: center;" class="astro-WOAJNSZP">
+	<astro-island uid="GRCq" component-url="/ThemeToggleButton.59d2057c.js" component-export="default" renderer-url="/client.369633e5.js" props="{&quot;class&quot;:[0,&quot;astro-WOAJNSZP&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd"></path></svg><input type="radio" name="theme-toggle" value="light" title="Use light theme" aria-label="Use light theme" /></label><label class><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><input type="radio" name="theme-toggle" value="dark" title="Use dark theme" aria-label="Use dark theme" /></label></div></astro-island>
+</div>
+
+
+	</div>
+</nav>
+
+
+			</aside>
+		</main>
+		<footer class="astro-KWKT4VAY">
+	<!-- Thanks to @5t3ph for https://smolcss.dev/#smol-avatar-list! --><div class="contributors astro-T5Y7V74A">
+	<ul class="avatar-list astro-T5Y7V74A" style="--avatar-count: 0">
+		
+	</ul>
+	
+	<a href="https://github.com/withastro/astro/commits/main/examples/docs/src/pages/en/code/coding-guideline.md" class="astro-T5Y7V74A">Contributors</a>
+</div>
+
+
+</footer>
+
+
+	</body></html>
