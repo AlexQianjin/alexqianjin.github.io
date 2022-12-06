@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalexqianjin_github_io=self.webpackChunkalexqianjin_github_io||[]).push([[5669],{3362:i=>{i.exports=JSON.parse('{"title":"Linux - Basis","slug":"/category/linux---basis","permalink":"/docs/category/linux---basis","navigation":{"previous":{"title":"Docs Intro","permalink":"/docs/intro"},"next":{"title":"Command","permalink":"/docs/linux/cmd"}}}')}}]);

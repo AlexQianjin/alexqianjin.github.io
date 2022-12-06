@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalexqianjin_github_io=self.webpackChunkalexqianjin_github_io||[]).push([[697],{375:e=>{e.exports=JSON.parse('{"title":"Notes","slug":"/category/notes","permalink":"/docs/category/notes","navigation":{"previous":{"title":"Docker","permalink":"/docs/linux/docker"},"next":{"title":"Notes","permalink":"/docs/note/notes"}}}')}}]);
