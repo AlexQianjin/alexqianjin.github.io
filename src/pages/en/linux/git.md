@@ -48,7 +48,7 @@ layout: ../../../layouts/MainLayout.astro
 - git branch [name]
 - git branch -d [name]
 - git branch -D [name]
-- git branch -m [rename]
+- git branch -m [rename-current-branch]
 - git push origin serverfix
 - git checkout -b serverfix origin/serverfix
 - git checkout --track origin/serverfix
