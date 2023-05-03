@@ -93,6 +93,7 @@ layout: ../../../layouts/MainLayout.astro
 - ls ‐lh
 - grep -r font-size . | wc -l // "count number"
 - grep -r h[1-6] ./*.css | wc -l
+- scp root@[source-ip]:/root/cert ./
 
 ```
 sudo passwd root
