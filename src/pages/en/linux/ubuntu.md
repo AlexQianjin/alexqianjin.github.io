@@ -1,3 +1,11 @@
+---
+title: Ubuntu
+description: Ubuntu
+layout: ../../../layouts/MainLayout.astro
+---
+
+# Ubuntu
+
 ### Setup Ubuntu
 #### Update sources.list
 ```
@@ -20,7 +28,7 @@ apt-get update
 apt upgrade
 ```
 
-#### Install git
+### Install git
 ```
 git --version
 sudo apt install git
@@ -45,7 +53,7 @@ Acquire::https::Proxy "http://127.0.0.1:10809/";
 ### curl
 - apt install -y curl
 
-#### Install ibus-pinyin
+### Install ibus-pinyin
 - Settings => Region & Language => Manage Installed Languages => Install/Remove Languages... => Chinese(simplified) => Apply
 ```
 sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3
