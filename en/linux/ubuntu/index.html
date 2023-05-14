@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<h3 id="setup-ubuntu">Setup Ubuntu</h3>
+<h4 id="update-sourceslist">Update sources.list</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">lsb_release -a | grep Codename | awk '{print $2}' # 输出结果为下文中的Codename</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">vi sources.list</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">deb http://mirrors.aliyun.com/ubuntu/ $Codename main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb http://mirrors.aliyun.com/ubuntu/ $Codename-backports main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb http://mirrors.aliyun.com/ubuntu/ $Codename-proposed main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb http://mirrors.aliyun.com/ubuntu/ $Codename-security main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb http://mirrors.aliyun.com/ubuntu/ $Codename-updates main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb-src http://mirrors.aliyun.com/ubuntu/ $Codename main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb-src http://mirrors.aliyun.com/ubuntu/ $Codename-backports main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb-src http://mirrors.aliyun.com/ubuntu/ $Codename-proposed main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb-src http://mirrors.aliyun.com/ubuntu/ $Codename-security main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9">deb-src http://mirrors.aliyun.com/ubuntu/ $Codename-updates main multiverse restricted universe</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">apt-get update</span></span>
+<span class="line"><span style="color: #c9d1d9">apt upgrade</span></span></code></pre>
+<h4 id="install-git">Install git</h4>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">git --version</span></span>
+<span class="line"><span style="color: #c9d1d9">sudo apt install git</span></span></code></pre>
+<h3 id="apt-proxy">apt proxy</h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9"># create proxy file in the /etc/apt/apt.conf.d</span></span>
+<span class="line"><span style="color: #c9d1d9">Acquire::http::Proxy "http://127.0.0.1:10809/";</span></span>
+<span class="line"><span style="color: #c9d1d9">Acquire::https::Proxy "http://127.0.0.1:10809/";</span></span></code></pre>
+<h3 id="certbot">Certbot</h3>
+<ul>
+<li>sudo certbot certonly —manual (also for renew)</li>
+</ul>
+<h3 id="ping">ping</h3>
+<ul>
+<li>apt-get install -yqq inetutils-ping</li>
+</ul>
+<h3 id="add-apt-repository">add-apt-repository</h3>
+<ul>
+<li>apt-get install software-properties-common</li>
+</ul>
+<h3 id="curl">curl</h3>
+<ul>
+<li>apt install -y curl</li>
+</ul>
+<h4 id="install-ibus-pinyin">Install ibus-pinyin</h4>
+<ul>
+<li>Settings => Region &#x26; Language => Manage Installed Languages => Install/Remove Languages… => Chinese(simplified) => Apply</li>
+</ul>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3</span></span>
+<span class="line"><span style="color: #c9d1d9">im-config -s ibus</span></span>
+<span class="line"><span style="color: #c9d1d9">sudo apt install ibus-pinyin</span></span>
+<span class="line"><span style="color: #c9d1d9">sudo ibus-setup</span></span>
+<span class="line"><span style="color: #c9d1d9">reboot</span></span></code></pre>
+<ul>
+<li>Settings => Region &#x26; Language => Input Sources => +</li>
+</ul>
+<h3 id="openssl">Openssl</h3>
+<ul>
+<li>openssl genrsa -aes256 -out private_key.pem 2048</li>
+<li>openssl rsa -pubout -in private_key.pem -out public_key.pem</li>
+<li>openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -days 3650</li>
+<li>openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj “/CN=unused” -days 3650</li>
+<li>openssl pkcs12 -export -in rsa_cert.pem -inkey rsa_private.pem -CSP “Microsoft Enhanced RSA and AES Cryptographic Provider” -out rsa_cert.pfx</li>
+<li>openssl x509 -text -noout -in cert.pem</li>
+<li>openssl x509 -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/fullchain.pem</li>
+<li>openssl rsa -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/privkey.pem</li>
+<li>openssl s_client -connect s.alexqin.top:443</li>
+</ul>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E"># convert ca.cer to ca.crt</span></span>
+<span class="line"><span style="color: #C9D1D9">openssl x509 -inform PEM -in ca.cer -out ca.crt</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">cp </span><span style="color: #FF7B72">*</span><span style="color: #C9D1D9">.crt /usr/share/ca-certificates</span></span>
+<span class="line"><span style="color: #C9D1D9">ls -l /usr/share/ca-certificates</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">sudo dpkg-reconfigure ca-certificates</span></span>
+<span class="line"><span style="color: #C9D1D9">ls -l /etc/ssl/certs </span><span style="color: #FF7B72">|</span><span style="color: #C9D1D9"> grep -i ca</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #8B949E"># another way</span></span>
+<span class="line"><span style="color: #C9D1D9">sudo cp </span><span style="color: #FF7B72">*</span><span style="color: #C9D1D9">crt  /usr/local/share/ca-certificates/</span></span>
+<span class="line"><span style="color: #C9D1D9">sudo update-ca-certificates</span></span></code></pre>
+<h3 id="openssh">Openssh</h3>
+<ul>
+<li>sudo apt install openssh-server</li>
+<li>sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.original</li>
+<li>sudo chmod a-w /etc/ssh/sshd_config.original</li>
+<li>sudo systemctl restart sshd.service</li>
+<li>sudo service ssh status</li>
+<li>sudo nano /etc/ssh/sshd_config</li>
+<li>sudo service ssh restart</li>
+<li>ssh-keygen -t rsa -b 4096 -C ”<a href="mailto:your_email@example.com">your_email@example.com</a>”</li>
+<li>ssh-keygen -t ed25519 -C ”<a href="mailto:your_email@example.com">your_email@example.com</a>”</li>
+<li>ssh-copy-id alex@172.96.19.251 -p 122 (client side)</li>
+</ul>
+<h3 id="moodle">Moodle</h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">git clone --depth=1 https://github.com/moodle/moodle.git</span></span>
+<span class="line"><span style="color: #c9d1d9">git remote set-branches origin 'MOODLE_39_STABLE'</span></span>
+<span class="line"><span style="color: #c9d1d9">git fetch --depth 1 origin MOODLE_39_STABLE</span></span>
+<span class="line"><span style="color: #c9d1d9">git checkout MOODLE_39_STABLE</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">git clone -b MOODLE_39_STABLE --depth 1  git://git.moodle.org/moodle.git</span></span>
+<span class="line"><span style="color: #c9d1d9">docker network create moodle-net</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run --network moodle-net -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.8.0</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run --network moodle-net --name moodle-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0.20</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run --network moodle-net --name moodle-mariadb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:10.5.4</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run --network moodle-net --name myadmin -d -p 8080:80 -e PMA_HOST=moodle-mysql phpmyadmin/phpmyadmin</span></span>
+<span class="line"><span style="color: #c9d1d9">docker run --network moodle-net --name myadmin-maria -d -p 8080:80 -e PMA_HOST=moodle-mariadb phpmyadmin/phpmyadmin</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">mysql></span></span>
+<span class="line"><span style="color: #c9d1d9">CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';  // 'newuser'@'%'</span></span>
+<span class="line"><span style="color: #c9d1d9">GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';</span></span>
+<span class="line"><span style="color: #c9d1d9">FLUSH PRIVILEGES;</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">GRANT type_of_permission ON database_name.table_name TO ‘username’@'localhost’;</span></span>
+<span class="line"><span style="color: #c9d1d9">REVOKE type_of_permission ON database_name.table_name FROM ‘username’@‘localhost’;</span></span>
+<span class="line"><span style="color: #c9d1d9">SHOW GRANTS username;</span></span>
+<span class="line"><span style="color: #c9d1d9">DROP USER ‘username’@‘localhost’;</span></span></code></pre>
+<h3 id="vmware-player">VMWare Player</h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">sudo mount -t vboxsf share /mnt/share</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9"># vmware player</span></span>
+<span class="line"><span style="color: #c9d1d9">sudo apt install open-vm-tools</span></span>
+<span class="line"><span style="color: #c9d1d9"># /etc/fstab</span></span>
+<span class="line"><span style="color: #c9d1d9">vmhgfs-fuse /mnt/hgfs fuse defaults,allow_other 0 0</span></span></code></pre>
+<h3 id="cmd">CMD</h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">netstat -anvp tcp | grep 4200</span></span>
+<span class="line"><span style="color: #c9d1d9">openssl s_client -connect s.alexqin.top:443</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">cat /etc/os-release</span></span>
+<span class="line"><span style="color: #c9d1d9">uname -r</span></span></code></pre>
