@@ -56,7 +56,7 @@ export const SIDEBAR: Sidebar = {
 			{text: 'cmd', link: 'en/linux/cmd'},
 			{text: 'git', link: 'en/linux/git'},
 			{text: 'docker', link: 'en/linux/docker'},
-			{text: 'docker', link: 'en/linux/ubuntu'},
+			{text: 'ubuntu', link: 'en/linux/ubuntu'},
 		],
 		'Note': [
 			{text: 'note', link: 'en/note/notes'},
