@@ -150,3 +150,36 @@ docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate \
     -o /local/out/javascript \
     -c /local/javascript.config	
 ```    
+
+## Install docker
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+# DRY_RUN=1 sh ./get-docker.sh
+sudo sh get-docker.sh
+```
+
+### Docker User
+- sudo groupadd docker
+- sudo usermod -aG docker ${USER} / sudo gpasswd -a $USER docker
+- su root / su ${USER} / newgrp docker
+- sudo systemctl restart docker
+
+## Setup docker image mirror
+```
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://{xxxxxxx}i.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+## mongo in docker
+- sudo docker run -d --name db -p 27017:27017 -v $(pwd)/mongo:/docker-entrypoint-initdb.d -e MONGO_INITDB_DATABASE=weapondb mongo mongod
+- sudo docker run -d --name db -v $(pwd)/scripts/mongo:/docker-entrypoint-initdb.d -e MONGO_INITDB_DATABASE=weapondb mongo mongod
+
+## cannot access the network in ubuntu or ubuntu docker container
+- echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+- echo "search lan" >> /etc/resolv.conf
