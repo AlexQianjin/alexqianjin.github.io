@@ -233,7 +233,20 @@
 <li>tail</li>
 <li>grep</li>
 <li>find</li>
-<li>du</li>
+<li>locate file_name</li>
+<li>du option file_or_directory # check the size</li>
+<li>top</li>
+<li>history</li>
+<li>tar -czvf archive_name.tar.gz file_or_directory</li>
+<li>tar -xvzf archive_name.tar.gz</li>
+<li>whoami</li>
+<li>date</li>
+<li>cal</li>
+<li>uptime</li>
+<li>file file_name</li>
+<li>wc file_name</li>
+<li>sed options file_name</li>
+<li>awk ‘pattern { action }’ file_name</li>
 </ul>
 <h3 id="system">System</h3>
 <ul>
@@ -247,6 +260,7 @@ sudo chown -R alex /var/www/html</li>
 <li>sudo netstat -tulpn | grep LISTEN</li>
 <li>sudo netstat -anp | grep LISTEN</li>
 <li>sudo netstat -anvp tcp | grep 4200</li>
+<li>iptables option</li>
 <li>systemctl list-unit-files | grep enabled</li>
 <li>systemctl | grep running</li>
 <li>systemctl show [unit]</li>
@@ -254,13 +268,17 @@ sudo chown -R alex /var/www/html</li>
 <li>sudo rm -r</li>
 <li>sudo ufw allow 1520</li>
 <li>adduser myuser          # [myuser为用户名，可自定义指定]将提示你输入登录密码，请输入并牢记</li>
+<li>deluser —remove-home username
+groups username</li>
 <li>sudo passwd myuser</li>
 <li>cat /etc/passwd</li>
 <li>cat /etc/group</li>
+<li>useradd username</li>
 <li>usermod -aG sudo myuser # 将创建的用户添加到sudo分组中，以便使用管理员的命令</li>
+<li>userdel username</li>
+<li>su - root</li>
 <li>exit                    # 结束终端会话</li>
 <li>sudo passwd</li>
-<li>su - root</li>
 <li>curl -O <a href="https://raw.githubusercontent.com/AlexQianjin/Weapon/master/README.md">https://raw.githubusercontent.com/AlexQianjin/Weapon/master/README.md</a></li>
 <li>wget <a href="https://raw.githubusercontent.com/AlexQianjin/Weapon/master/README.md">https://raw.githubusercontent.com/AlexQianjin/Weapon/master/README.md</a></li>
 <li>sudo bash install.sh</li>
@@ -269,6 +287,7 @@ sudo chown -R alex /var/www/html</li>
 <li>lshw | less</li>
 <li>free</li>
 <li>free -m</li>
+<li>free -h</li>
 <li>df -h</li>
 <li>fdisk -l</li>
 <li>echo -e “NODE_ENV=production \nPORT=3000 \nMONGOLAB_URI=mongodb://db/weapondb” >> .env</li>
@@ -284,7 +303,7 @@ sudo chown -R alex /var/www/html</li>
 <li>find . -regex ‘./txt.+’ -exec mv {} ./test1 ;</li>
 <li>envsubst envsubst &#x3C; test.txt > output.file</li>
 <li>echo “export NODEJS_SERVICE_PORT=1233” >> .bashrc &#x26;&#x26; source .bashrc</li>
-<li>uname －a</li>
+<li>uname－a</li>
 <li>cat /proc/version</li>
 <li>lsb_release -a</li>
 <li>apt-cache search php7.4-curl</li>
@@ -292,6 +311,7 @@ sudo chown -R alex /var/www/html</li>
 <li>ps -e / ps -A</li>
 <li>ps -aux</li>
 <li>kill {pid}</li>
+<li>killall process_name</li>
 <li>sudo systemctl list-unit-files</li>
 <li>sudo systemctl list-unit-files | grep enabled</li>
 <li>sudo systemctl status openresty.service</li>
