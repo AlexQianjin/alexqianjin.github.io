@@ -25,7 +25,20 @@ layout: ../../../layouts/MainLayout.astro
 - tail
 - grep
 - find
-- du
+- locate file_name
+- du option file_or_directory # check the size
+- top
+- history
+- tar -czvf archive_name.tar.gz file_or_directory
+- tar -xvzf archive_name.tar.gz
+- whoami
+- date
+- cal
+- uptime
+- file file_name
+- wc file_name
+- sed options file_name
+- awk 'pattern { action }' file_name
 
 ### System
 - __to set address manually__  
@@ -38,6 +51,7 @@ layout: ../../../layouts/MainLayout.astro
 - sudo netstat -tulpn | grep LISTEN
 - sudo netstat -anp | grep LISTEN
 - sudo netstat -anvp tcp | grep 4200
+- iptables option
 - systemctl list-unit-files | grep enabled
 - systemctl | grep running
 - systemctl show [unit]
@@ -45,13 +59,17 @@ layout: ../../../layouts/MainLayout.astro
 - sudo rm -r
 - sudo ufw allow 1520
 - adduser myuser          # [myuser为用户名，可自定义指定]将提示你输入登录密码，请输入并牢记
+- deluser --remove-home username
+groups username
 - sudo passwd myuser
 - cat /etc/passwd 
 - cat /etc/group
+- useradd username
 - usermod -aG sudo myuser # 将创建的用户添加到sudo分组中，以便使用管理员的命令
+- userdel username
+- su - root
 - exit                    # 结束终端会话
 - sudo passwd 
-- su - root
 - curl -O https://raw.githubusercontent.com/AlexQianjin/Weapon/master/README.md
 - wget https://raw.githubusercontent.com/AlexQianjin/Weapon/master/README.md
 - sudo bash install.sh
@@ -60,6 +78,7 @@ layout: ../../../layouts/MainLayout.astro
 - lshw | less
 - free 
 - free -m
+- free -h
 - df -h
 - fdisk -l
 - echo -e "NODE_ENV=production \nPORT=3000 \nMONGOLAB_URI=mongodb://db/weapondb" >> .env
@@ -75,7 +94,7 @@ layout: ../../../layouts/MainLayout.astro
 - find . -regex '.\/txt.+' -exec mv {} ./test1 \;
 - envsubst envsubst < test.txt > output.file
 - echo "export NODEJS_SERVICE_PORT=1233" >> .bashrc && source .bashrc
-- uname －a
+- uname－a
 - cat /proc/version
 - lsb_release -a
 - apt-cache search php7.4-curl
@@ -83,6 +102,7 @@ layout: ../../../layouts/MainLayout.astro
 - ps -e / ps -A
 - ps -aux
 - kill {pid}
+- killall process_name
 - sudo systemctl list-unit-files
 - sudo systemctl list-unit-files | grep enabled
 - sudo systemctl status openresty.service
