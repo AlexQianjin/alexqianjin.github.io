@@ -89,6 +89,7 @@ groups username
 - dpkg -l
 - dpkg -i foo.deb && apt-get install -f
 - find / -name 'let*' -type d
+- find / -iname 'let*' -type d # case insensitive
 - find . -regex '.\/txt.+' | xargs -i mv {} ./test1
 - find . -regex '.\/txt.+' | xargs -I {} mv {} ./test1
 - find . -regex '.\/txt.+' -exec mv {} ./test1 \;
