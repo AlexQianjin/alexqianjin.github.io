@@ -298,6 +298,7 @@ groups username</li>
 <li>dpkg -l</li>
 <li>dpkg -i foo.deb &#x26;&#x26; apt-get install -f</li>
 <li>find / -name ‘let*’ -type d</li>
+<li>find / -iname ‘let*’ -type d # case insensitive</li>
 <li>find . -regex ‘./txt.+’ | xargs -i mv {} ./test1</li>
 <li>find . -regex ‘./txt.+’ | xargs -I {} mv {} ./test1</li>
 <li>find . -regex ‘./txt.+’ -exec mv {} ./test1 ;</li>
