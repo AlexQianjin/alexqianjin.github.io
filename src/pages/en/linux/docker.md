@@ -205,3 +205,15 @@ sudo systemctl restart docker
 ## cannot access the network in ubuntu or ubuntu docker container
 - echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 - echo "search lan" >> /etc/resolv.conf
+
+## Next Cloud with Postgres in the docker
+```
+docker network create --driver bridge nextcloud-net
+docker run --name postgres -v /home/{{user}}/nextcloud-db:/var/lib/postgresql/data -e POSTGRES_PASSWORD={{password}} --network nextcloud-net -d postgres
+
+docker run --name nextcloud -d -p 8080:80 -v /home/{{user}}/nextcloud:/var/www/html --network nextcloud-net nextcloud
+
+sudo chown -R www-data:www-data /media/usbdrive
+
+docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
+```
