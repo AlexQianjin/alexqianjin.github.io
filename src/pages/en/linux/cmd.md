@@ -9,6 +9,7 @@ layout: ../../../layouts/MainLayout.astro
 ### Commands
 - ls
 - ls ‐ahl
+- ls -1 | wc -i # count files number
 - ll
 - cd
 - ln
