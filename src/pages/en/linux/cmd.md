@@ -65,6 +65,8 @@ groups username
 - sudo passwd myuser
 - cat /etc/passwd 
 - cat /etc/group
+- compgen -u # display all the users
+- compgen -g # display all the groups
 - useradd username
 - usermod -aG sudo myuser # 将创建的用户添加到sudo分组中，以便使用管理员的命令
 - userdel username
