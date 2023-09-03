@@ -28,8 +28,46 @@ apt-get update
 apt upgrade
 ```
 
-### Install git
+### Format a disk with Ubuntu Server
+``` shell
+# show the disks
+sudo fdisk -l
+
+# using this one to create new partition
+# it also can delete the partition
+gdisk /dev/sda
+d # delete partition
+n # create a new partition
+w # save the changes
+
+# format
+sudo mkfs.ext4 /dev/sda1
+
+# mount
+sudo mount /mnt/usb /dev/sda1
+
+# fstab
+sudo vi /etc/fstab
+UUID={{uuid}} /mnt/usb defaults 0 0
+
+sudo mount -a
+
+# this one is used to combine different disks into one mount dir
+mhddfs
+
+# the others
+# delete partitions
+ls /dev/sdb*
+sfdisk --delete /dev/sdb
+sfdisk --list /dev/sdb
+
+fdisk /dev/sda
+g create a new empty GPT partition table
+n create a new partition
 ```
+
+### Install git
+``` shell
 git --version
 sudo apt install git
 ```
