@@ -28,6 +28,21 @@ apt-get update
 apt upgrade
 ```
 
+### Setup a SD card to the exFAT format
+``` shell
+sudo apt update
+sudo apt upgrade
+sudo apt install exfat-fuse
+
+sudo mount -t exfat /dev/sdb1 /media/exfat
+
+sudo fdisk -l
+sudo blkid
+
+/etc/fstab
+UUID=CA1C-06BC /media/exfat exfat defaults,auto,umask=000,users,rw 0 0
+```
+
 ### Format a disk with Ubuntu Server
 ``` shell
 # show the disks
@@ -45,6 +60,12 @@ sudo mkfs.ext4 /dev/sda1
 
 # mount
 sudo mount /mnt/usb /dev/sda1
+
+# show blk
+sudo lsblk
+
+# get UUID
+sudo blkid
 
 # fstab
 sudo vi /etc/fstab
