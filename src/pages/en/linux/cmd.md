@@ -18,6 +18,7 @@ layout: ../../../layouts/MainLayout.astro
 - rmdir
 - mv
 - cp
+- rsync -ah --progress --stats $source $destination
 - touch
 - cat
 - nl
@@ -61,7 +62,7 @@ layout: ../../../layouts/MainLayout.astro
 - sudo ufw allow 1520
 - adduser myuser          # [myuser为用户名，可自定义指定]将提示你输入登录密码，请输入并牢记
 - deluser --remove-home username
-groups username
+- groups username
 - sudo passwd myuser
 - cat /etc/passwd 
 - cat /etc/group

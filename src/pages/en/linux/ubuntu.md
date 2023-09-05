@@ -4,7 +4,7 @@ description: Ubuntu
 layout: ../../../layouts/MainLayout.astro
 ---
 
-# Ubuntu
+# Ubuntu Notes
 
 ### Setup Ubuntu
 #### Update sources.list
@@ -85,6 +85,72 @@ sfdisk --list /dev/sdb
 fdisk /dev/sda
 g create a new empty GPT partition table
 n create a new partition
+```
+
+### Samba
+``` shell
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install samba samba-common-bin
+
+sudo chmod 1775 entertainment
+
+# Create a demoUser account on the local system:
+sudo useradd -M -s /sbin/nologin demoUser
+# Omit the -M parameter if the user requires a home directory on this host. For Samba access, the account does not require a valid shell.
+# To enable the demoUser account on the local system:
+sudo passwd demoUser
+# Enter new UNIX password: Passw0rd
+# Retype new UNIX password: Passw0rd
+# passwd: password updated successfully
+
+# Setting a local password is required to enable the account. Samba denies access if the account is disabled locally. Local log ins using this password are not possible if the account was created without a valid shell.
+# Add the demoUser account to the Samba database:
+sudo smbpasswd -a demoUser
+# New SMB password: Passw0rd
+# Retype new SMB password: Passw0rd
+# Added user demoUser.
+
+sudo vi/etc/samba/smb.conf
+# sudo adduser pi
+# sudo smbpasswd -a pi
+
+testparm -s
+sudo systemctl restart smbd
+
+[share]
+Comment = Pi shared folder
+Path = /share
+Browseable = yes
+Writeable = Yes
+only guest = no
+create mask = 0775
+directory mask = 0775
+Public = yes
+Guest ok = yes
+
+[sharee]
+path = /mnt/entertainment
+browseable = yes
+read only = no
+create mask = 0775
+directory mask = 0775
+vfs objects = fruit streams_xattr
+public = no
+
+[hdd2t]
+   comment = WD HDD 2T
+   path = /mnt/hdd2t/share
+   browseable = yes
+   writeable = yes
+   guest ok = no
+   read only = no
+   create mask = 0775
+   directory mask = 0775
+   read list = pia
+   write list = pia
+   valid users = pia
+   admin users = pia
 ```
 
 ### Install git
