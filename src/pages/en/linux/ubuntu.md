@@ -119,7 +119,8 @@ sudo chmod 1775 entertainment
 
 # Create a demoUser account on the local system:
 sudo useradd -M -s /sbin/nologin demoUser
-# Omit the -M parameter if the user requires a home directory on this host.
+# Omit the -M parameter if the user requires a home directory
+# on this host.
 # For Samba access, the account does not require a valid shell.
 # To enable the demoUser account on the local system:
 sudo passwd demoUser
