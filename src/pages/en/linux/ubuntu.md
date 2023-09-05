@@ -180,12 +180,6 @@ public = no
    admin users = pia
 ```
 
-### Install git
-``` shell
-git --version
-sudo apt install git
-```
-
 ### apt proxy
 ```
 # create proxy file in the /etc/apt/apt.conf.d
@@ -196,14 +190,8 @@ Acquire::https::Proxy "http://127.0.0.1:10809/";
 ### Certbot
 - sudo certbot certonly --manual (also for renew)
 
-### ping
-- apt-get install -yqq inetutils-ping
-
 ### add-apt-repository
-- apt-get install software-properties-common
-
-### curl
-- apt install -y curl
+- sudo apt install software-properties-common
 
 ### Install ibus-pinyin
 - Settings => Region & Language => Manage Installed Languages => Install/Remove Languages... => Chinese(simplified) => Apply
@@ -216,16 +204,23 @@ reboot
 ```
 - Settings => Region & Language => Input Sources => +
 
+- ping
+  - apt-get install -yqq inetutils-ping
+
 ### Openssl
-- openssl genrsa -aes256 -out private_key.pem 2048
-- openssl rsa -pubout -in private_key.pem -out public_key.pem
-- openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -days 3650
-- openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused" -days 3650
-- openssl pkcs12 -export -in rsa_cert.pem -inkey rsa_private.pem -CSP "Microsoft Enhanced RSA and AES Cryptographic Provider" -out rsa_cert.pfx
-- openssl x509 -text -noout -in cert.pem
-- openssl x509 -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/fullchain.pem
-- openssl rsa -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/privkey.pem
-- openssl s_client -connect s.alexqin.top:443
+``` shell
+openssl genrsa -aes256 -out private_key.pem 2048
+openssl rsa -pubout -in private_key.pem -out public_key.pem
+openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -days 3650
+openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused" -days 3650
+openssl pkcs12 -export -in rsa_cert.pem -inkey rsa_private.pem -CSP "Microsoft Enhanced RSA and AES Cryptographic Provider" -out rsa_cert.pfx
+openssl x509 -text -noout -in cert.pem
+openssl x509 -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/fullchain.pem
+openssl rsa -noout -text -in /etc/letsencrypt/live/el.alexqin.cn/privkey.pem
+
+openssl s_client -connect s.alexqin.top:443
+```
+
 
 ``` bash
 # convert ca.cer to ca.crt
@@ -243,16 +238,19 @@ sudo update-ca-certificates
 ```
 
 ### Openssh
-- sudo apt install openssh-server
-- sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.original
-- sudo chmod a-w /etc/ssh/sshd_config.original
-- sudo systemctl restart sshd.service
-- sudo service ssh status
-- sudo nano /etc/ssh/sshd_config
-- sudo service ssh restart
-- ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-- ssh-keygen -t ed25519 -C "your_email@example.com"
-- ssh-copy-id alex@172.96.19.251 -p 122 (client side)
+``` shell
+sudo apt install openssh-server
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.original
+sudo chmod a-w /etc/ssh/sshd_config.original
+sudo systemctl restart sshd.service
+sudo service ssh status
+sudo nano /etc/ssh/sshd_config
+sudo service ssh restart
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-copy-id alex@172.96.19.251 -p 122 (client side)
+```
+
 
 ### Moodle
 ```
@@ -281,20 +279,11 @@ DROP USER ‘username’@‘localhost’;
 ```
 
 ### VMWare Player
-```
+``` shell
 sudo mount -t vboxsf share /mnt/share
 
 # vmware player
 sudo apt install open-vm-tools
 # /etc/fstab
 vmhgfs-fuse /mnt/hgfs fuse defaults,allow_other 0 0
-```
-
-### CMD
-```
-netstat -anvp tcp | grep 4200
-openssl s_client -connect s.alexqin.top:443
-
-cat /etc/os-release
-uname -r
 ```

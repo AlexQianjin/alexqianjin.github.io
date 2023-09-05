@@ -100,6 +100,8 @@ layout: ../../../layouts/MainLayout.astro
 - envsubst envsubst < test.txt > output.file
 - echo "export NODEJS_SERVICE_PORT=1233" >> .bashrc && source .bashrc
 - uname－a
+- uname -r
+- cat /etc/os-release
 - cat /proc/version
 - lsb_release -a
 - apt-cache search php7.4-curl
