@@ -87,6 +87,28 @@ g create a new empty GPT partition table
 n create a new partition
 ```
 
+### Mount an NTFS drive
+``` shell
+sudo apt update
+sudo apt install ntfs-3g fuse
+
+sudo parted -l
+sudo mkdir -p /mnt/ntfs
+sudo mount -t ntfs /dev/sdb /mnt/ntfs
+
+mount | grep ntfs
+sudo umount /mnt/ntfs
+
+sudo mount -o ro -t ntfs /dev/sdb /mnt/ntfs
+sudo mount -o rw -t ntfs /dev/sdb /mnt/ntfs
+
+sudo nano /etc/fstab
+
+/dev/sdb        /mnt/ntfs       ntfs    defaults        0       0
+
+sudo mount -a
+```
+
 ### Samba
 ``` shell
 sudo apt-get update
