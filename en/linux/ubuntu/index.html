@@ -313,14 +313,18 @@
 <span class="line"></span>
 <span class="line"><span style="color: #8B949E"># Create a demoUser account on the local system:</span></span>
 <span class="line"><span style="color: #C9D1D9">sudo useradd -M -s /sbin/nologin demoUser</span></span>
-<span class="line"><span style="color: #8B949E"># Omit the -M parameter if the user requires a home directory on this host. For Samba access, the account does not require a valid shell.</span></span>
+<span class="line"><span style="color: #8B949E"># Omit the -M parameter if the user requires a home directory on this host.</span></span>
+<span class="line"><span style="color: #8B949E"># For Samba access, the account does not require a valid shell.</span></span>
 <span class="line"><span style="color: #8B949E"># To enable the demoUser account on the local system:</span></span>
 <span class="line"><span style="color: #C9D1D9">sudo passwd demoUser</span></span>
 <span class="line"><span style="color: #8B949E"># Enter new UNIX password: Passw0rd</span></span>
 <span class="line"><span style="color: #8B949E"># Retype new UNIX password: Passw0rd</span></span>
 <span class="line"><span style="color: #8B949E"># passwd: password updated successfully</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #8B949E"># Setting a local password is required to enable the account. Samba denies access if the account is disabled locally. Local log ins using this password are not possible if the account was created without a valid shell.</span></span>
+<span class="line"><span style="color: #8B949E"># Setting a local password is required to enable the account.</span></span>
+<span class="line"><span style="color: #8B949E"># Samba denies access if the account is disabled locally.</span></span>
+<span class="line"><span style="color: #8B949E"># Local log ins using this password are not possible</span></span>
+<span class="line"><span style="color: #8B949E"># if the account was created without a valid shell.</span></span>
 <span class="line"><span style="color: #8B949E"># Add the demoUser account to the Samba database:</span></span>
 <span class="line"><span style="color: #C9D1D9">sudo smbpasswd -a demoUser</span></span>
 <span class="line"><span style="color: #8B949E"># New SMB password: Passw0rd</span></span>
