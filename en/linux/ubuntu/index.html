@@ -307,6 +307,7 @@
 <h3 id="clean-the-bootfirmware">Clean the /boot/firmware</h3>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">apt list --installed </span><span style="color: #FF7B72">|</span><span style="color: #C9D1D9"> grep linux-image</span></span>
 <span class="line"><span style="color: #C9D1D9">uname -r</span></span>
+<span class="line"><span style="color: #C9D1D9">sudo apt-get remove linux-image-2.6.32-{21,37,38,39}-server</span></span>
 <span class="line"><span style="color: #C9D1D9">sudo apt-get autoclean </span><span style="color: #FF7B72">&#x26;&#x26;</span><span style="color: #C9D1D9"> sudo apt-get autoremove</span></span>
 <span class="line"><span style="color: #C9D1D9">sudo apt autoremove --purge</span></span>
 <span class="line"><span style="color: #C9D1D9">sudo apt purge linux-image-5.15.0-1-generic</span></span>
