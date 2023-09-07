@@ -109,6 +109,24 @@ sudo nano /etc/fstab
 sudo mount -a
 ```
 
+### Clean the /boot/firmware
+``` shell 
+apt list --installed | grep linux-image
+uname -r
+sudo apt-get autoclean && sudo apt-get autoremove
+sudo apt autoremove --purge
+sudo apt purge linux-image-5.15.0-1-generic
+df -Th /boot
+sudo du -sh /boot/*
+sudo ls -lhS /boot/*
+apt list linux-*$kversion* --installed
+dpkg --list | egrep 'linux-image|linux-headers'
+
+sudo rm /boot/vmlinuz-5.4.0-7634-generic
+sudo rm /boot/*-5.4.0-{7634}-*
+sudo rm /boot/*-5.4.0-{7634,7624}-*
+```
+
 ### Samba
 ``` shell
 sudo apt-get update
