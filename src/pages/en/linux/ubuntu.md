@@ -117,6 +117,9 @@ sudo apt-get remove linux-image-2.6.32-{21,37,38,39}-server
 sudo apt-get autoclean && sudo apt-get autoremove
 sudo apt autoremove --purge
 sudo apt purge linux-image-5.15.0-1-generic
+
+sudo rm /boot/firmware/*.bak /boot/firmware/overlays/*.bak
+
 df -Th /boot
 sudo du -sh /boot/*
 sudo ls -lhS /boot/*
