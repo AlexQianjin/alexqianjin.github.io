@@ -41,6 +41,7 @@ layout: ../../../layouts/MainLayout.astro
 - wc file_name
 - sed options file_name
 - awk 'pattern { action }' file_name
+- vcgencmd measure_temp # get the temperature
 
 ### System
 - __to set address manually__  
