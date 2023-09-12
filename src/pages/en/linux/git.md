@@ -78,9 +78,16 @@ layout: ../../../layouts/MainLayout.astro
 - git remote -v
 
 ## Git SSH
-- ssh-keygen -o -t rsa -C "your.email@example.com" -b 4096
+- ssh-keygen -o -t rsa  -b 4096 -C "your.email@example.com"
+- ssh-keygen -t ed25519 -C "qianjin.qin@qq.com"
 - cat ~/.ssh/id_rsa.pub | clip  **Git Bash on Windows**
 - ssh -T git@example.com
+
+## Github CLI
+``` shell
+gh auth login --with-token < mytoken.txt
+gh auth token
+```
  
 ## 1. 新建代码库
 ```
