@@ -98,6 +98,7 @@ layout: ../../../layouts/MainLayout.astro
 - find . -regex '.\/txt.+' | xargs -i mv {} ./test1
 - find . -regex '.\/txt.+' | xargs -I {} mv {} ./test1
 - find . -regex '.\/txt.+' -exec mv {} ./test1 \;
+- find . | grep -E '[A-Za-z]{1,9}-[0-9]{13}.+'
 - envsubst envsubst < test.txt > output.file
 - echo "export NODEJS_SERVICE_PORT=1233" >> .bashrc && source .bashrc
 - uname－a
