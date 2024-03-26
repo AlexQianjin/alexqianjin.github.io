@@ -109,6 +109,19 @@ sudo nano /etc/fstab
 sudo mount -a
 ```
 
+### dpkg was interrupted
+``` shell
+sudo rm /var/lib/apt/lists/lock
+
+sudo rm /var/cache/apt/archives/lock
+
+cd /var/lib/dpkg/updates
+
+sudo rm *
+
+sudo apt-get update
+```
+
 ### Clean the /boot/firmware
 ``` shell 
 apt list --installed | grep linux-image
