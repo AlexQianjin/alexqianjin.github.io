@@ -322,3 +322,20 @@ sudo apt install open-vm-tools
 # /etc/fstab
 vmhgfs-fuse /mnt/hgfs fuse defaults,allow_other 0 0
 ```
+
+### Virtual Box
+``` shell
+sudo su
+apt install gcc make bzip2
+# mkdir --parents /media/cdrom
+mount /dev/cdrom /media/cdrom
+/media/cdrom/VBoxLinuxAdditions.run
+reboot
+
+modinfo vboxguest
+sudo usermod --append --groups vboxsf -- "$USER"
+cat /etc/group | grep "$USER"
+
+# /etc/fstab
+share /mnt/share vboxsf defaults 0 0
+```
