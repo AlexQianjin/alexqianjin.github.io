@@ -95,7 +95,9 @@
 <span class="line"><span>docker export</span></span>
 <span class="line"><span>  docker export -o test_for_run.tar ce5</span></span>
 <span class="line"><span>docker import</span></span>
-<span class="line"><span>  docker import test_for_run.tar = test/ubuntu:v1.0</span></span></code></pre>
+<span class="line"><span>  docker import test_for_run.tar = test/ubuntu:v1.0</span></span>
+<span class="line"><span>docker update</span></span>
+<span class="line"><span>  docker update --restart=no container-name</span></span></code></pre>
 <h2 id="network">Network</h2>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span>docker network create my-net</span></span>
 <span class="line"><span>docker network rm my-net</span></span>
