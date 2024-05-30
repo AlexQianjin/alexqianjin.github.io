@@ -75,6 +75,8 @@ docker export
   docker export -o test_for_run.tar ce5
 docker import
   docker import test_for_run.tar = test/ubuntu:v1.0
+docker update
+  docker update --restart=no container-name
 ```
 
 ## Network
@@ -116,6 +118,7 @@ docker run --volumes-from dbdta2 -v $(pwd):/backup busybox tar xvf /backup/backu
 docker cp <containerId>:/usr/local/etc/php/conf.d/php.ini ~/moodle-docker/php/
 docker cp my-postgres.conf <containerId>:/usr/local
 ```
+
 
 ## Dockerfile
 ```

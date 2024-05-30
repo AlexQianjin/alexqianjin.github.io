@@ -122,6 +122,12 @@ sudo rm *
 sudo apt-get update
 ```
 
+### fsck ext4
+```
+sudo umount /dev/sda1
+sudo fsck.ext4 -y -p /dev/sda1
+```
+
 ### Clean the /boot/firmware
 ``` shell 
 apt list --installed | grep linux-image
