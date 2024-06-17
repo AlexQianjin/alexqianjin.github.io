@@ -222,11 +222,32 @@ public = no
 ```
 
 ### apt proxy
+**Temporary Proxy Configuration:**
+
+You can set a proxy for a single `apt` command by using the `-o` option. For example:
+
+```sh
+sudo apt -o Acquire::http::Proxy="http://proxyserver:port" install package-name
+sudo apt -o  Acquire::https::Proxy="http://127.0.0.1:10809" update install package-name
 ```
-# create proxy file in the /etc/apt/apt.conf.d
+**For HTTP and HTTPS proxies:**  
+Open or create the file `/etc/apt/apt.conf.d/95proxies` using your preferred text editor:
+
+```sh
+sudo nano /etc/apt/apt.conf.d/95proxies
+```
+
+Add the following lines to the file, replacing `http://proxyserver:port` with your actual proxy details:
+
+```sh
+Acquire::http::Proxy "http://proxyserver:port/";
+Acquire::https::Proxy "http://proxyserver:port/";
 Acquire::http::Proxy "http://127.0.0.1:10809/";
 Acquire::https::Proxy "http://127.0.0.1:10809/";
 ```
+
+### npm proxy
+
 
 ### Certbot
 - sudo certbot certonly --manual (also for renew)
