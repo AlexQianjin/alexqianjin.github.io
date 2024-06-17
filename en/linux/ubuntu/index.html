@@ -240,6 +240,8 @@ Open or create the file <code>/etc/apt/apt.conf.d/95proxies</code> using your pr
 <span class="line"><span style="color:#B392F0">Acquire::http::Proxy</span><span style="color:#9ECBFF"> "http://127.0.0.1:10809/"</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#B392F0">Acquire::https::Proxy</span><span style="color:#9ECBFF"> "http://127.0.0.1:10809/"</span><span style="color:#E1E4E8">;</span></span></code></pre>
 <h3 id="npm-proxy">npm proxy</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> config</span><span style="color:#9ECBFF"> set</span><span style="color:#9ECBFF"> proxy</span><span style="color:#9ECBFF"> http://127.0.0.1:10809</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> config</span><span style="color:#9ECBFF"> set</span><span style="color:#9ECBFF"> https-proxy</span><span style="color:#9ECBFF"> http://127.0.0.1:10809</span></span></code></pre>
 <h3 id="certbot">Certbot</h3>
 <ul>
 <li>sudo certbot certonly —manual (also for renew)</li>
