@@ -247,6 +247,10 @@ Acquire::https::Proxy "http://127.0.0.1:10809/";
 ```
 
 ### npm proxy
+```sh
+npm config set proxy http://127.0.0.1:10809
+npm config set https-proxy http://127.0.0.1:10809
+```
 
 
 ### Certbot
