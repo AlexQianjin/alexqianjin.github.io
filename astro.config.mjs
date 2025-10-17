@@ -7,10 +7,9 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Alex Qin's Docs",
-      social: {
-        github: "https://github.com/AlexQianjin/alexqianjin.github.io",
-        instagram: "https://instagram.com/thealexqin",
-      },
+      social: [
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/AlexQianjin/alexqianjin.github.io' },
+        { icon: 'instagram', label: 'Instagram', href: 'https://instagram.com/thealexqin' }],
       sidebar: [
         {
           label: "Guides",
