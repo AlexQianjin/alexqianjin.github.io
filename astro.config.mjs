@@ -26,6 +26,7 @@ export default defineConfig({
             { label: "git", slug: "linux/git" },
             { label: "docker", slug: "linux/docker" },
             { label: "ubuntu", slug: "linux/ubuntu" },
+            { label: "virtualbox", slug: "linux/virtualbox" }
           ],
         },
         {
