@@ -311,7 +311,7 @@ sudo nano /etc/ssh/sshd_config
 sudo service ssh restart
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ssh-keygen -t ed25519 -C "your_email@example.com"
-ssh-copy-id alex@172.96.19.251 -p 122 (client side)
+ssh-copy-id -p 122 alex@172.96.19.251  (client side)
 ```
 
 
@@ -339,31 +339,4 @@ GRANT type_of_permission ON database_name.table_name TO ‘username’@'localhos
 REVOKE type_of_permission ON database_name.table_name FROM ‘username’@‘localhost’;
 SHOW GRANTS username;
 DROP USER ‘username’@‘localhost’;
-```
-
-### VMWare Player
-``` shell
-sudo mount -t vboxsf share /mnt/share
-
-# vmware player
-sudo apt install open-vm-tools
-# /etc/fstab
-vmhgfs-fuse /mnt/hgfs fuse defaults,allow_other 0 0
-```
-
-### Virtual Box
-``` shell
-sudo su
-apt install gcc make bzip2
-# mkdir --parents /media/cdrom
-mount /dev/cdrom /media/cdrom
-/media/cdrom/VBoxLinuxAdditions.run
-reboot
-
-modinfo vboxguest
-sudo usermod --append --groups vboxsf -- "$USER"
-cat /etc/group | grep "$USER"
-
-# /etc/fstab
-share /mnt/share vboxsf defaults 0 0
 ```

@@ -60,7 +60,7 @@ Get-AzureStorageContainer
 - PIXEA
 - LocalSend
 - SyncFolder
-- PixPin / Sinpaste / [轻松便捷爱截图 (qq.com)](https://jietu.qq.com/)
+- PixPin / Sinpaste
 - Wiz Tree / Tree Size Free / Disk Analyzer Pro **/** Space Sniffer /
 - Bulk Crap Uninstaller
 - Zen Flip Clock (App Store)
