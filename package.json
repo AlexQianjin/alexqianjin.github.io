@@ -12,24 +12,26 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@algolia/client-search": "^4.20.0",
-    "@astrojs/preact": "^3.0.1",
-    "@astrojs/react": "^3.0.6",
-    "@astrojs/tailwind": "^5.0.2",
-    "@docsearch/css": "^3.5.2",
-    "@docsearch/react": "^3.5.2",
-    "@types/node": "^20.10.0",
-    "@types/react": "^18.2.38",
-    "@types/react-dom": "^18.2.17",
-    "astro": "^3.6.0",
-    "preact": "^10.19.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@algolia/client-search": "^5.54.0",
+    "@astrojs/preact": "^5.1.5",
+    "@astrojs/react": "^5.0.7",
+    "@docsearch/css": "^4.6.3",
+    "@docsearch/react": "^4.6.3",
+    "@types/node": "^25.9.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^6.4.6",
+    "preact": "^10.29.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "html-escaper": "^3.0.3"
+    "@astrojs/check": "^0.9.9",
+    "@types/html-escaper": "^3.0.4",
+    "html-escaper": "^3.0.3",
+    "typescript": "^6.0.3"
   },
   "engines": {
-    "node": ">=18.12"
+    "node": ">=22.12.0"
   }
 }

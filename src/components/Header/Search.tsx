@@ -1,23 +1,14 @@
 /** @jsxImportSource react */
 import { useState, useCallback, useRef } from 'react';
 import { ALGOLIA } from '../../config';
-import '@docsearch/css';
 import './Search.css';
 
 import { createPortal } from 'react-dom';
-import * as docSearchReact from '@docsearch/react';
-
-/** FIXME: This is still kinda nasty, but DocSearch is not ESM ready. */
-const DocSearchModal =
-	docSearchReact.DocSearchModal || (docSearchReact as any).default.DocSearchModal;
-const useDocSearchKeyboardEvents =
-	docSearchReact.useDocSearchKeyboardEvents ||
-	(docSearchReact as any).default.useDocSearchKeyboardEvents;
+import { DocSearchModal, useDocSearchKeyboardEvents } from '@docsearch/react';
 
 export default function Search() {
 	const [isOpen, setIsOpen] = useState(false);
 	const searchButtonRef = useRef<HTMLButtonElement>(null);
-	const [initialQuery, setInitialQuery] = useState('');
 
 	const onOpen = useCallback(() => {
 		setIsOpen(true);
@@ -27,20 +18,15 @@ export default function Search() {
 		setIsOpen(false);
 	}, [setIsOpen]);
 
-	const onInput = useCallback(
-		(e) => {
-			setIsOpen(true);
-			setInitialQuery(e.key);
-		},
-		[setIsOpen, setInitialQuery]
-	);
+	const onAskAiToggle = useCallback(() => {}, []);
 
 	useDocSearchKeyboardEvents({
 		isOpen,
 		onOpen,
 		onClose,
-		onInput,
 		searchButtonRef,
+		isAskAiActive: false,
+		onAskAiToggle,
 	});
 
 	return (
@@ -70,10 +56,10 @@ export default function Search() {
 			{isOpen &&
 				createPortal(
 					<DocSearchModal
-						initialQuery={initialQuery}
 						initialScrollY={window.scrollY}
 						onClose={onClose}
-						indexName={ALGOLIA.indexName}
+						onAskAiToggle={onAskAiToggle}
+						indices={[ALGOLIA.indexName]}
 						appId={ALGOLIA.appId}
 						apiKey={ALGOLIA.apiKey}
 						transformItems={(items) => {

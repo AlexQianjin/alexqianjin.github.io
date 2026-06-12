@@ -1,5 +1,3 @@
-import { text } from "stream/consumers";
-
 export const SITE = {
 	title: 'Alex Qin',
 	description: 'The documentations by Alex Qin',

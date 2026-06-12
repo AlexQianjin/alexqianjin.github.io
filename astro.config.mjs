@@ -6,9 +6,9 @@ import react from '@astrojs/react';
 export default defineConfig({
 	integrations: [
 		// Enable Preact to support Preact JSX components.
-		preact(),
+		preact({ exclude: ['**/Header/{LanguageSelect,Search}.tsx'] }),
 		// Enable React for the Algolia search component.
-		react(),
+		react({ include: ['**/Header/{LanguageSelect,Search}.tsx'] }),
 	],
 	site: `https://astro.build/`,
 });
