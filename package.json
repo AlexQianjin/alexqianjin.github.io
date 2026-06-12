@@ -1,35 +1,19 @@
 {
-  "name": "@example/docs",
+  "name": "starlight-docs",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
+  "packageManager": "pnpm@9.13.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "check": "astro check && tsc",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@algolia/client-search": "^5.54.0",
-    "@astrojs/preact": "^5.1.5",
-    "@astrojs/react": "^5.0.7",
-    "@docsearch/css": "^4.6.3",
-    "@docsearch/react": "^4.6.3",
-    "@types/node": "^25.9.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@astrojs/starlight": "^0.40.0",
     "astro": "^6.4.6",
-    "preact": "^10.29.2",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
-  },
-  "devDependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@types/html-escaper": "^3.0.4",
-    "html-escaper": "^3.0.3",
-    "typescript": "^6.0.3"
+    "sharp": "^0.35.1"
   },
   "engines": {
     "node": ">=22.12.0"
