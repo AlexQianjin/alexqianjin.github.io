@@ -2,7 +2,7 @@
   "name": "starlight-docs",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@9.13.2",
+  "packageManager": "pnpm@11.13.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,9 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.40.0",
-    "astro": "^6.4.6",
-    "sharp": "^0.35.1"
+    "@astrojs/starlight": "^0.41.3",
+    "astro": "^7.0.9",
+    "sharp": "^0.35.3"
   },
   "engines": {
     "node": ">=22.12.0"
