@@ -9,6 +9,7 @@ export default defineConfig({
     starlight({
       title: "Alex Qin's Docs",
       social: [
+        { icon: 'document', label: 'Resume', href: '/resume-en' },
         { icon: 'github', label: 'GitHub', href: 'https://github.com/AlexQianjin/alexqianjin.github.io' },
         { icon: 'instagram', label: 'Instagram', href: 'https://instagram.com/thealexqin' }],
       sidebar: [
