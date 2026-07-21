@@ -1,78 +1,69 @@
-#### 个人信息
+<style>
+@page { size: A4; margin: 9mm 11mm; }
+body { max-width: 188mm; margin: 0 auto; color: #172033; font: 10pt/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif; }
+h1 { margin: 0 0 2px; color: #102a43; font-size: 23pt; line-height: 1.1; letter-spacing: 1px; }
+h2 { margin: 7px 0 3px; padding-bottom: 2px; border-bottom: 1.2px solid #2f6f9f; color: #174f78; font-size: 12pt; line-height: 1.2; }
+h3 { margin: 4px 0 1px; color: #172033; font-size: 10.2pt; line-height: 1.25; }
+p { margin: 1px 0 3px; }
+ul { margin: 1px 0 3px; padding-left: 17px; }
+li { margin: 0 0 1px; }
+a { color: #174f78; text-decoration: none; }
+strong { color: #102a43; }
+.meta { margin-bottom: 1px; color: #334e68; }
+.links { margin-bottom: 4px; color: #334e68; font-size: 9.3pt; }
+.tagline { margin: 2px 0 5px; color: #243b53; font-size: 10.5pt; }
+@media print { body { max-width: none; } a { color: inherit; } }
+</style>
 
-- 秦前进 | 男 | 37 | | 工作年限：17年 ｜ 居住地: 武汉
-- 手机：15972217310 | Email：qianjin.qin@gmail.com
-- 中国地质大学(武汉)（2023-2026） 本科/计算机科学与技术
-- 武汉语言文化职业学院（2006-2009） 大专/计算机软件技术
-- 期望职位：高级前端工程师/全栈工程师/项目经理 | 期望薪资：25k~30k
-- Github：https://github.com/AlexQianjin | LinkedIn: https://www.linkedin.com/in/qinqianjin
-- 持有美国和加拿大10年VISA，多次去加州出差和客户一起工作
-- 热爱工作和生活。运动爱好：网球，公路自行车，健身
+# 秦前进
 
----
+<div class="tagline"><strong>高级前端工程师 · 全栈工程师 · 技术团队负责人</strong> ｜ 17年软件研发经验 ｜ 武汉</div>
+<div class="meta">159 7221 7310 ｜ qianjin.qin@gmail.com</div>
+<div class="links"><strong>GitHub:</strong> <a href="https://github.com/AlexQianjin">https://github.com/AlexQianjin</a> ｜ <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/qinqianjin">https://www.linkedin.com/in/qinqianjin</a></div>
 
-#### 技能清单
+## 职业概述
 
-- 编程语言：JavaScript/TypeScript/Python/C#
-- Web框架：Express/NestJS/ASP.NET MVC
-- 前端框架：React
-- 前端工具：Vite/Webpack
-- 数据库相关：PostgreSQL/MySQL/MongoDB/SQLite
-- 容器相关：Docker/Docker Compose
-- 版本管理和自动化部署工具：Git/Github/Github Action
-- 单元测试：Jest/Vitest
-- 自动化测试：Playwright/Playwright MCP
-- 云和开放平台：Microsoft Azure/AWS/微信小程序/微信公众号
-- 操作系统: Windows/Linux(Ubuntu)/Unix(macOS)
-- 敏捷开发：Scrum
-- 英语能力：听/说/读/写
+17年软件研发与交付经验，覆盖前端开发、全栈协作、项目管理和团队培养。熟悉 React、TypeScript 及现代前端工程化，具备单元测试、E2E 自动化、性能优化和持续交付经验。曾赴美国与客户现场协作，能够用英语参与需求澄清、方案讨论和跨国团队交付。
 
-#### AI工具
-- ChatGPT/Codex/Gemini Pro/Qianwen/Workbuddy
+## 核心技能
 
----
+- **前端：** React、JavaScript、TypeScript、Vite、Webpack
+- **后端与数据：** Node.js、Express、NestJS、Python、C#、PostgreSQL、MySQL、MongoDB、SQLite
+- **质量与交付：** Jest、Vitest、Playwright、GitHub Actions、Docker、Docker Compose、Scrum
+- **云与平台：** Microsoft Azure、AWS、微信小程序、微信公众号；熟悉 Linux、macOS、Windows
+- **AI 辅助研发：** ChatGPT、Codex、Gemini、通义千问，用于开发、代码审查、测试及技术调研
+- **AI 技能：** 新建Skills，集成MCP，Spec-driven Development
 
-#### 工作经历
+## 工作经历
 
-##### （ 2022年6月 ~ 2026年7月 ）百蓁生物技术（武汉）有限公司
+### 百蓁生物技术（武汉）有限公司 ｜ 高级前端开发工程师 ｜ 2022.06–2026.07
 
-- **高级前端开发工程师** 前端功能实现/单元测试/E2E/和加拿大团队讨论需求
+- 负责蛋白质测序产品 **PEAKS Online** 的 React 前端研发，与加拿大团队协作完成需求分析与交付。
+- 推进性能优化、依赖升级、单元测试与 E2E 自动化，并参与部分 Java 后端开发和代码审查。
 
-##### （ 2015年8月 ~ 2022年6月 ）纬创软件（武汉）有限公司
+### 纬创软件（武汉）有限公司 ｜ Team Leader / 前端开发工程师 ｜ 2015.08–2022.06
 
-- **Team Leader** 项目管理/美国出差沟通需求/团队培养/技术培训
-- **前端开发工程师** 前端功能实现/单元测试/集成/发布
+- 负责项目管理、前端研发、团队培养和技术培训；赴美国加州与客户现场协作并推进需求落地。
+- **EWT：** 将 Backlog 拆解为 7 个 Sprint 的 User Stories，推动每个 Sprint 均完成一次生产发布。
+- **CEP：** 快速补位 React 前端开发并获得 Code Review 权限；培养团队成员并面向部门开展 React 培训。
 
-##### （ 2009年7月 ~ 2015年7月 ）武汉光庭信息技术有限公司
+### 武汉光庭信息技术有限公司 ｜ 项目经理 / C# 开发工程师 ｜ 2009.07–2015.07
 
-- **项目经理** 项目管理/出差沟通需求/团队培养
-- **C#开发工程师** 功能实现/单元测试/集成/发布/现场调试
+- 负责政务信息化项目的需求沟通、架构设计、研发、部署和现场交付，并带领团队持续响应客户需求。
+- 在国土资源项目中引入 Prism MVVM、AutoMapper 和 T4 代码生成，改善协作效率并减少重复开发。
 
----
+## 代表项目
 
-#### 项目经历
+**PEAKS Online（蛋白质测序 SaaS）** ｜ React、Java、E2E 自动化<br>
+负责核心前端功能、性能优化、自动化测试和依赖升级；与加拿大团队持续协作，并运用 AI 工具辅助开发与审查。
 
-##### Peaks Online产品
-Peaks Online是加拿大公司BSI的产品，基于浏览器的蛋白质测序软件。前端使用React，后端使用Java的分布式程序。我主要负责前端开发，除了常规的功能开发，还负责前端性能优化，前端自动化测试，前端所用到的库的版本升级。使用ChatGPT/Codex/Gemini Pro 进行前端开发和代码审查，以及部分后端的Java开发和前端的E2E测试代码开发。
+**湖北省国土资源厅信访系统** ｜ 项目管理、系统架构、数据可视化<br>
+统筹需求、架构、部署及现场联调；项目获客户认可，并在省级会议中演示。
 
-##### EWT项目
+## 教育与其他
 
-客户新成立EWT项目组，需要加速新功能的发布。我作为Team Leader去美国加州出差，和客户讨论Backlog里面的需求，分解为7个Sprints的User Stories。回国后负责项目管理和前端开发，做到每个Sprint都有一次Production的发布。之前印度团队做这个项目的时候达不到这么高的Release频率。客户对我们团队的表现给予了表扬。
-
-##### CEP项目
-
-项目组在此项目中都是负责后端开发，客户那边前端开发人员短缺。我根据领导的安排开始参与客户的前端开发中，前端开发采用React框架，迅速上手之后能顺利的和客户协作开发，由客户review我提交的PR。最终客户对我的前端开发给予好评，并且把项目的Code Review的权限分配给我。我在此项目中积累了React经验，培养其他同事参与前端开发，并且在部门开展React培训。
-
-##### 湖北省国土资源厅信访项目
-
-客户需要建设信访信息化系统，需要对各市县的信访案件及来电来访进行信息化，并且对数据统计做可视化。我担任此项目的项目经理，负责项目需求沟通，系统架构设计，项目部署及现场调试程控交换机。和团队一起积极响应客户的需求，每周至少三次去客户那边沟通。客户对该项目满意，请专业影视团队拍摄宣传片，并且在省级会议上演示该项目。个人通过该项目提升了和客户直接沟通需求的能力。
-
-##### 国土资源管理项目
-
-客户需要做国土资源信息化建设，需要在系统中监控外业执法人员轨迹显示在地图上，以及卫片上报。我在此项目中作为开发人员，负责前端Silverlight和后端WCF服务的开发。在Silverlight中使用基于Prism的MVVM模式，让结构清晰，方便协同开发。在WCF中使用AutoMapper替换手动对象映射，提升编码效率，减少bug出现概率。使用T4模板引擎开发一套基础业务代码生成工具，减少基础代码编写工作量，降低出错概率，提升效率。
-
---- 
-
-#### 致谢
-
-感谢您花时间阅读我的简历，期待能有机会和您共事。
+- 中国地质大学（武汉）｜ 计算机科学与技术，本科 ｜ 2023–2026
+- 武汉语言文化职业学院 ｜ 计算机软件技术，大专 ｜ 2006–2009
+- 英语可用于工作沟通；持美国、加拿大长期签证，具备多次海外客户现场协作经验
+- **兴趣爱好：** 网球、公路自行车、健身
+- **求职方向：** 高级前端工程师 / 全栈工程师 / 项目经理 ｜ **期望薪资：** 25K–30K
