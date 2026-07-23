@@ -1,7 +1,7 @@
 ---
-const pageTitle = "Alex Qin | Senior Front-End Engineer";
+const pageTitle = "Alex Qin (Qianjin Qin) | Senior Frontend Engineer";
 const pageDescription =
-  "Alex Qin's resume: 17 years in software delivery, specializing in React, TypeScript, full-stack collaboration, and technical team leadership.";
+  "Alex Qin's resume: 17 years in software delivery, including 5+ years specializing in enterprise frontend development, React, TypeScript, and frontend architecture.";
 ---
 
 <!doctype html>
@@ -28,9 +28,9 @@ const pageDescription =
       <header class="resume-header">
         <div>
           <p class="eyebrow">RESUME · CURRICULUM VITAE</p>
-          <h1>Alex Qin</h1>
-          <p class="tagline">Senior Front-End Engineer · Full-Stack Engineer · Technical Team Lead</p>
-          <p class="summary-meta">17 Years in Software Delivery <span>·</span> Wuhan, China</p>
+          <h1>Alex Qin <span class="legal-name">(Qianjin Qin)</span></h1>
+          <p class="tagline">Senior Frontend Engineer · Full-Stack Engineer · Technical Team Lead</p>
+          <p class="summary-meta">Wuhan, China</p>
         </div>
         <address>
           <div class="contact-row">
@@ -48,15 +48,16 @@ const pageDescription =
 
       <section>
         <h2>PROFESSIONAL SUMMARY</h2>
-        <p>Software engineer and team lead with 17 years of experience spanning front-end engineering, full-stack collaboration, project delivery, and team development. Strong in React, TypeScript, modern front-end tooling, unit and E2E testing, performance optimization, and continuous delivery. Experienced in working on-site with U.S. clients and collaborating in English across international teams.</p>
+        <p>Senior engineer and team lead with 17 years in software delivery, including 5+ years specializing in enterprise frontend development. Strong in React, TypeScript, frontend architecture, scalable component systems, performance optimization, and modern engineering practices. Experienced in technical solution design, code review, mentoring, and English collaboration across international teams.</p>
       </section>
 
       <section>
         <h2>CORE SKILLS</h2>
         <div class="skills">
-          <p><strong>Front End</strong><span>React, JavaScript, TypeScript, Vite, Webpack</span></p>
-          <p><strong>Back End &amp; Data</strong><span>Node.js, Express, NestJS, Python, C#, PostgreSQL, MySQL, MongoDB, SQLite</span></p>
-          <p><strong>Quality &amp; Delivery</strong><span>Jest, Vitest, Playwright, GitHub Actions, Docker, Docker Compose, Scrum</span></p>
+          <p><strong>Frontend</strong><span>React, React Hooks, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, responsive design, Vite, Webpack</span></p>
+          <p><strong>Architecture</strong><span>Frontend architecture, reusable component systems, state management, design patterns, technical solution design</span></p>
+          <p><strong>Backend &amp; Data</strong><span>Java, Node.js, Express, NestJS, REST APIs, PostgreSQL, MySQL, MongoDB, SQLite, Python, C#</span></p>
+          <p><strong>Quality &amp; Delivery</strong><span>Code review, Jest, Vitest, Playwright, Git, CI/CD, GitHub Actions, Docker, Scrum</span></p>
           <p><strong>Cloud &amp; Platforms</strong><span>Microsoft Azure, AWS, WeChat Mini Programs, WeChat Official Accounts; Linux, macOS, Windows</span></p>
           <p><strong>AI-Assisted Engineering</strong><span>ChatGPT, Codex, Gemini, and Qwen for development, code review, testing, and technical research</span></p>
           <p><strong>Applied AI Skills</strong><span>Custom skill creation, MCP integration, and spec-driven development</span></p>
@@ -72,8 +73,10 @@ const pageDescription =
           </div>
           <p class="role">Senior Front-End Engineer</p>
           <ul>
-            <li>Developed the React front end for <strong>PEAKS Online</strong>, a browser-based protein sequencing product, collaborating with the Canadian team from requirement analysis through delivery.</li>
-            <li>Led performance improvements, dependency upgrades, unit testing, and E2E automation; also contributed to Java back-end development and code reviews.</li>
+            <li>Designed and developed the React and TypeScript frontend for <strong>PEAKS Online</strong>, an enterprise browser-based protein sequencing product backed by Java and PostgreSQL.</li>
+            <li>Contributed to frontend architecture, application structure, reusable components, development standards, and key technical solution decisions.</li>
+            <li>Improved maintainability and delivery quality through performance optimization, dependency upgrades, code reviews, unit testing, and E2E automation.</li>
+            <li>Integrated Java REST APIs, contributed to selected backend work, mentored developers, and used Codex and Gemini to accelerate implementation, debugging, and technical exploration.</li>
           </ul>
         </article>
 
@@ -107,8 +110,8 @@ const pageDescription =
         <h2>SELECTED PROJECTS</h2>
         <article class="project">
           <h3>PEAKS Online — Protein Sequencing SaaS</h3>
-          <p class="project-tech">React · Java · E2E Automation</p>
-          <p>Delivered core front-end features, performance optimization, test automation, and dependency upgrades while collaborating continuously with the Canadian team and applying AI-assisted development and review.</p>
+          <p class="project-tech">React · TypeScript · Java · PostgreSQL</p>
+          <p>Delivered core frontend features, architecture improvements, reusable components, performance optimization, and automated testing in close collaboration with the Canadian team.</p>
         </article>
         <article class="project">
           <h3>Hubei Provincial Land Resources Petition System</h3>
@@ -145,6 +148,7 @@ const pageDescription =
   .resume-header { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; padding-bottom: 26px; border-bottom: 1px solid #d9e3e9; }
   .eyebrow { margin: 0 0 10px; color: #39799e; font-size: .69rem; font-weight: 800; letter-spacing: .2em; }
   h1 { margin: 0; color: #102a43; font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 780; line-height: .95; letter-spacing: .04em; }
+  .legal-name { font-size: .38em; font-weight: 650; letter-spacing: 0; white-space: nowrap; }
   .tagline { margin: 16px 0 4px; color: #174f78; font-size: 1rem; font-weight: 700; }
   .summary-meta { margin: 0; color: #637381; font-size: .9rem; }
   .summary-meta span { margin: 0 .35em; color: #9babb5; }
