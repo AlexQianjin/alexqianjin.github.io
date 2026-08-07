@@ -1,18 +1,20 @@
 <style>
 @page { size: A4; margin: 8mm 11mm; }
-body { max-width: 188mm; margin: 0 auto; color: #172033; font: 9.4pt/1.27 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
-h1 { margin: 0 0 2px; color: #102a43; font-size: 22pt; line-height: 1.1; letter-spacing: .3px; }
-h2 { margin: 5px 0 2px; padding-bottom: 2px; border-bottom: 1.2px solid #2f6f9f; color: #174f78; font-size: 11.5pt; line-height: 1.2; }
-h3 { margin: 3px 0 1px; color: #172033; font-size: 9.8pt; line-height: 1.2; }
+body { max-width: 188mm; margin: 0 auto; background: #fff; color: #1d1d1f; font: 9.2pt/1.26 -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1 { margin: 0 0 1px; color: #1d1d1f; font-size: 26pt; font-weight: 700; line-height: 1.02; letter-spacing: -0.9px; }
+h2 { display: block; width: 100%; clear: both; margin: 5px 0 2px; padding-bottom: 2px; border-bottom: 0.6px solid #d2d2d7; color: #1d1d1f; font-size: 11.4pt; font-weight: 700; line-height: 1.2; letter-spacing: -0.2px; }
+h2 + p { display: block; clear: both; margin-top: 3px; }
+h3 { margin: 3px 0 1px; color: #1d1d1f; font-size: 9.5pt; font-weight: 600; line-height: 1.2; letter-spacing: -0.1px; }
 p { margin: 1px 0 3px; }
 ul { margin: 1px 0 3px; padding-left: 16px; }
 li { margin: 0 0 1px; }
-a { color: #174f78; text-decoration: none; }
-strong { color: #102a43; }
-.meta { margin-bottom: 1px; color: #334e68; }
-.links { margin-bottom: 4px; color: #334e68; font-size: 9pt; }
-.tagline { margin: 2px 0 4px; color: #243b53; font-size: 10.2pt; }
-@media print { body { max-width: none; } a { color: inherit; } }
+li::marker { color: #86868b; }
+a { color: #06c; text-decoration: none; }
+strong { color: #1d1d1f; font-weight: 600; }
+.meta { margin-bottom: 1px; color: #6e6e73; }
+.links { margin-bottom: 4px; color: #6e6e73; font-size: 8.9pt; }
+.tagline { margin: 3px 0 4px; color: #424245; font-size: 9.8pt; letter-spacing: -0.15px; }
+@media print { body { max-width: none; } }
 </style>
 
 # Alex Qin (Qianjin Qin)

@@ -1,18 +1,20 @@
 <style>
 @page { size: A4; margin: 8mm 11mm; }
-body { max-width: 188mm; margin: 0 auto; color: #172033; font: 9.6pt/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif; }
-h1 { margin: 0 0 2px; color: #102a43; font-size: 23pt; line-height: 1.1; letter-spacing: 1px; }
-h2 { margin: 5px 0 2px; padding-bottom: 2px; border-bottom: 1.2px solid #2f6f9f; color: #174f78; font-size: 12pt; line-height: 1.2; }
-h3 { margin: 4px 0 1px; color: #172033; font-size: 10.2pt; line-height: 1.25; }
+body { max-width: 188mm; margin: 0 auto; background: #fff; color: #1d1d1f; font: 9.4pt/1.28 -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1 { margin: 0 0 1px; color: #1d1d1f; font-size: 27pt; font-weight: 700; line-height: 1.02; letter-spacing: -0.8px; }
+h2 { display: block; width: 100%; clear: both; margin: 6px 0 2px; padding-bottom: 2px; border-bottom: 0.6px solid #d2d2d7; color: #1d1d1f; font-size: 11.6pt; font-weight: 700; line-height: 1.2; letter-spacing: -0.15px; }
+h2 + p { display: block; clear: both; margin-top: 3px; }
+h3 { margin: 3px 0 1px; color: #1d1d1f; font-size: 9.7pt; font-weight: 600; line-height: 1.22; letter-spacing: -0.05px; }
 p { margin: 1px 0 3px; }
-ul { margin: 1px 0 3px; padding-left: 17px; }
+ul { margin: 1px 0 3px; padding-left: 16px; }
 li { margin: 0 0 1px; }
-a { color: #174f78; text-decoration: none; }
-strong { color: #102a43; }
-.meta { margin-bottom: 1px; color: #334e68; }
-.links { margin-bottom: 4px; color: #334e68; font-size: 9.3pt; }
-.tagline { margin: 2px 0 5px; color: #243b53; font-size: 10.5pt; }
-@media print { body { max-width: none; } a { color: inherit; } }
+li::marker { color: #86868b; }
+a { color: #06c; text-decoration: none; }
+strong { color: #1d1d1f; font-weight: 600; }
+.meta { margin-bottom: 1px; color: #6e6e73; }
+.links { margin-bottom: 4px; color: #6e6e73; font-size: 9pt; }
+.tagline { margin: 3px 0 4px; color: #424245; font-size: 10.1pt; letter-spacing: -0.1px; }
+@media print { body { max-width: none; } }
 </style>
 
 # 秦前进
